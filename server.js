@@ -34,14 +34,13 @@ app.post('/resistorlist', function(req,res)
 	resistor.save(function(err)
 	{
 		if(!err){
-			return console.log("created");
+			 console.log("created");
 		}
 		else{
-			return console.log(err);
+			 console.log(err);
 		}
 		return res.json(resistor);
 	});
-
 
 });
 app.delete("/resistorlist/:id", function(req,res)
@@ -51,11 +50,11 @@ app.delete("/resistorlist/:id", function(req,res)
 		return resistor.remove(function(err)
 		{
 			if(!err){
-			return console.log("removed");
-			return res.json(resistor);
+			 console.log("removed");
+			 res.json(resistor);
 		}
 		else{
-			return console.log(err);
+			 console.log(err);
 		}
 		});	
 	});
@@ -65,9 +64,9 @@ app.get('/resistorlist/:id', function(req,res)
 {
 	return resistorsmodel.findById(req.params.id, function (err, resistor) {
     if (!err) {
-      return res.json(resistor);
+       res.json(resistor);
     } else {
-      return console.log(err);
+       console.log(err);
     }
   });
 });
@@ -89,5 +88,5 @@ app.put("/resistorlist/:id", function(req,res)
 
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 7000);
 console.log('server running on port 3000');

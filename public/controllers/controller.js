@@ -11,8 +11,7 @@ myApp.controller('Appcontrol',function ($scope, $http){
 
 			});
 		};
-		refresh();
-		
+
 		$scope.addResistor = function ()
 		{
 			console.log($scope.resistor);
@@ -51,6 +50,9 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		{
 			$scope.resistor = "";
 		};
+	refresh();
 
-	});
+
+
+});
 
