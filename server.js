@@ -4,34 +4,34 @@ var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 
 
-mongoose.connect('mongodb://admin:admin@ds059804.mongolab.com:59804/contactlistapp');
+mongoose.connect('mongodb://admin:admin@ds054308.mongolab.com:54308/labinventory');
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyparser.json());
 
-var contactScheme = mongoose.Schema({name: String, email: String, number: String});
-var contactsmodel = mongoose.model('contacts', contactScheme);
+var resistorScheme = mongoose.Schema({sort: String, value: String, number: Number});
+var resistorsmodel = mongoose.model('resistor', resistorScheme);
 
 
-app.get('/contactlist', function(req,res)
+app.get('/resistorlist', function(req,res)
 {
 	console.log("I received a get request");
-	contactsmodel.find().exec(function(err, docs)
+	resistorsmodel.find().exec(function(err, docs)
 	{
 			res.json(docs);
 	});
 	
 });
-app.post('/contactlist', function(req,res)
+app.post('/resistorlist', function(req,res)
 {
 	console.log(req.body);
-	var contact;
-	contact = new contactsmodel({
-		name: req.body.name,
-		email: req.body.email,
-		number: req.body.number
+	var resistor;
+	resistor = new resistorsmodel({
+		sort: req.body.sort,
+		value: req.body.value,
+		number: req.body.number,
 	});
-	contact.save(function(err)
+	resistor.save(function(err)
 	{
 		if(!err){
 			return console.log("created");
@@ -39,22 +39,20 @@ app.post('/contactlist', function(req,res)
 		else{
 			return console.log(err);
 		}
-		return res.json(product);
+		return res.json(resistor);
 	});
 
-	/*contacts.insert.exec(req.body, function(err,doc)
-	{
-	})*/
+
 });
-app.delete("/contactlist/:id", function(req,res)
+app.delete("/resistorlist/:id", function(req,res)
 {
-	return contactsmodel.findById(req.params.id, function(err, product)
+	return resistorsmodel.findById(req.params.id, function(err, resistor)
 	{
-		return product.remove(function(err)
+		return resistor.remove(function(err)
 		{
 			if(!err){
 			return console.log("removed");
-			return res.json(product);
+			return res.json(resistor);
 		}
 		else{
 			return console.log(err);
@@ -63,29 +61,29 @@ app.delete("/contactlist/:id", function(req,res)
 	});
 	
 });
-app.get('/contactlist/:id', function(req,res)
+app.get('/resistorlist/:id', function(req,res)
 {
-	return contactsmodel.findById(req.params.id, function (err, contact) {
+	return resistorsmodel.findById(req.params.id, function (err, resistor) {
     if (!err) {
-      return res.json(contact);
+      return res.json(resistor);
     } else {
       return console.log(err);
     }
   });
 });
-app.put("/contactlist/:id", function(req,res)
+app.put("/resistorlist/:id", function(req,res)
 {
-	return contactsmodel.findById(req.params.id, function (err, contact) {
-    contact.name = req.body.name;
-    contact.email = req.body.email;
-    contact.number = req.body.number;
-    return contact.save(function (err) {
+	return resistorsmodel.findById(req.params.id, function (err, resistor) {
+    resistor.sort = req.body.sort,
+    resistor.value = req.body.value;
+    resistor.number = req.body.number;
+    return resistor.save(function (err) {
       if (!err) {
         console.log("updated");
       } else {
         console.log(err);
       }
-      return res.json(contact);
+      return res.json(resistor);
     });
   });
 
