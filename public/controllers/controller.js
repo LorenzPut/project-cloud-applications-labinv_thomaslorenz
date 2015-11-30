@@ -9,16 +9,16 @@ myApp.controller('Appcontrol',function ($scope, $http){
 				$scope.contactlist = response;
 				$scope.contact = "";
 			});
-		}
+		};
 		refresh();
 		
 		$scope.addContact = function ()
 		{
 			console.log($scope.contact);
 			$http.post('/contactlist', $scope.contact).success(function(response)
-				{
-					console.log(response);
+				{					
 					refresh();
+					console.log(response);
 				});
 		};
 		$scope.remove = function(id)

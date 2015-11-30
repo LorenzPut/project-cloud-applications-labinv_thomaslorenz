@@ -1,58 +1,93 @@
 var express = require("express");
 var app = express();
-var mongojs = require("mongojs");
-var db = mongojs('contactlist', ['contactlist']);
+var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 
 
+mongoose.connect('mongodb://admin:admin@ds059804.mongolab.com:59804/contactlistapp');
+
 app.use(express.static(__dirname + "/public"));
 app.use(bodyparser.json());
+
+var contactScheme = mongoose.Schema({name: String, email: String, number: String});
+var contactsmodel = mongoose.model('contacts', contactScheme);
+
+
 app.get('/contactlist', function(req,res)
 {
 	console.log("I received a get request");
-	db.contactlist.find(function(err,docs)
+	contactsmodel.find().exec(function(err, docs)
 	{
-		console.log(docs);
-		res.json(docs);	
-	});	
+			res.json(docs);
+	});
+	
 });
 app.post('/contactlist', function(req,res)
 {
-	db.contactlist.insert(req.body, function(err,doc)
+	console.log(req.body);
+	var contact;
+	contact = new contactsmodel({
+		name: req.body.name,
+		email: req.body.email,
+		number: req.body.number
+	});
+	contact.save(function(err)
 	{
-		res.json(doc);
-	})
+		if(!err){
+			return console.log("created");
+		}
+		else{
+			return console.log(err);
+		}
+		return res.json(product);
+	});
+
+	/*contacts.insert.exec(req.body, function(err,doc)
+	{
+	})*/
 });
 app.delete("/contactlist/:id", function(req,res)
 {
-	var id = req.params.id;
-	console.log(id);
-	db.contactlist.remove({_id: mongojs.ObjectId(id)}, function(err,doc)
+	return contactsmodel.findById(req.params.id, function(err, product)
 	{
-		res.json(doc);
-
-	})
+		return product.remove(function(err)
+		{
+			if(!err){
+			return console.log("removed");
+			return res.json(product);
+		}
+		else{
+			return console.log(err);
+		}
+		});	
+	});
+	
 });
 app.get('/contactlist/:id', function(req,res)
 {
-	var id = req.params.id;
-	console.log(id);
-	db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function(err,doc)
-	{
-		res.json(doc);
-
-	})
+	return contactsmodel.findById(req.params.id, function (err, contact) {
+    if (!err) {
+      return res.json(contact);
+    } else {
+      return console.log(err);
+    }
+  });
 });
 app.put("/contactlist/:id", function(req,res)
 {
-	var id = req.params.id;
-	console.log(req.body.name);
-	db.contactlist.findAndModify({query : {_id: mongojs.ObjectId(id)},
-		update : {$set:{name: req.body.name, email: req.body.email, number: req.body.number}},
-		new: true}, function(err,doc)
-		{
-			res.json(doc);
-		});
+	return contactsmodel.findById(req.params.id, function (err, contact) {
+    contact.name = req.body.name;
+    contact.email = req.body.email;
+    contact.number = req.body.number;
+    return contact.save(function (err) {
+      if (!err) {
+        console.log("updated");
+      } else {
+        console.log(err);
+      }
+      return res.json(contact);
+    });
+  });
 
 });
 
