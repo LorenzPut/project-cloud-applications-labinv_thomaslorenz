@@ -8,6 +8,7 @@ myApp.controller('Appcontrol',function ($scope, $http){
 				console.log("I got the data I requested");
 				$scope.resistorlist = response;
 				$scope.resistor = "";
+
 			});
 		};
 		refresh();
@@ -18,6 +19,7 @@ myApp.controller('Appcontrol',function ($scope, $http){
 			$http.post('/resistorlist', $scope.resistor).success(function(response)
 				{					
 					refresh();
+					console.log("refresh fired.");
 					console.log(response);
 				});
 		};
@@ -25,7 +27,7 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		{
 			console.log(id);
 			$http.delete("/resistorlist/" + id).success(function(response){
-				refresh();
+					refresh();
 			});
 		};
 		$scope.edit = function(id)
