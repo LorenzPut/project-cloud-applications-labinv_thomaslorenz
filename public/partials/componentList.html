@@ -1,0 +1,36 @@
+<div class="container" ng-controller = "Appcontrol">
+    <h1>Resistor list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Soort</th>
+            <th>Waarde</th>
+            <th>Aantal</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <select ng-model="resistor.sort">
+                    <option value="Resistor">Resistor</option>
+                    <option value="condensator">Condensator</option>
+                </select>
+            </td>
+            <td><INPUT class = "form-control" ng-model="resistor.value"></td>
+            <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="resistor.number"></td>
+            <td><button class = "btn btn-primary" ng-click = "addResistor()">Add resistor</button></td>
+            <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
+
+        </tr>
+        <tr ng-repeat = "resistor in resistorlist">
+            <td>{{resistor.sort}}</td>
+            <td>{{resistor.value}}</td>
+            <td>{{resistor.number}}</td>
+            <td><button class = "btn btn-danger" ng-click = "remove(resistor._id)">Remove</button></td>
+            <td><button class = "btn btn-warning" ng-click = "edit(resistor._id)">Edit</button></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller = "LoginCtrl">
+    <form name = "LoginForm" role="form">
+        <fieldset>
+            <div class="row" width = "30%">
+            <div class="form-group">
+                <label for="InUsername">Username :</label>
+                <input id="InUsername" placeholder="Type your username here" ng-model = "username" class="form-control input-small">
+            </div>
+            <div class = "form-group">
+                <label for="InPass">Password :</label>
+                <input id="InPass" placeholder="Type your password here" type="password" ng-model = "password" class="form-control input-small">
+            </div>
+            <button class="btn btn-default" ng-click = "CheckLogin(username, password)">Login</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
