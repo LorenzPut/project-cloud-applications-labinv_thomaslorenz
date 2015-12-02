@@ -1,20 +1,18 @@
 /**
  * Created by Lorenz Put on 24-11-2015.
  */
-app.controller('LoginCtrl', function CheckLoginData ($scope, $location)
+myApp.controller('LoginCtrl', function CheckLoginData ($scope, $http, mvIdentity, mvAuth)
 {
-    $scope.username = "";
-    $scope.password = "";
-    $scope.CheckLogin = function (username, password)
+    $scope.Signin = function (username, password)
     {
-        if(username == "Lorenz" && password == "Lol")
+        mvAuth.authenticateUser(username, password).then(function(success)
         {
-            alert("Gelukt");
-            $location.path('/dashboard');
-        }
-        else
-        {
-            alert("mislukt");
-        }
+            if(success) {
+                alert("You are logged in");
+            }
+            else {
+                alert("Login failed. Combination username/password is invalid");
+            }
+        })
     }
 });

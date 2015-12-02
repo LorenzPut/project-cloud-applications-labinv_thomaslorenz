@@ -1,7 +1,7 @@
-<div ng-controller = "LoginCtrl">
-    <form name = "LoginForm" role="form">
+<div ng-controller = "LoginCtrl" id="maindiv">
+    <form name = "LoginForm" role="form" ng-submit="Signin(username, password)">
         <fieldset>
-            <div class="row" width = "30%">
+            <div class="row col-lg-10" >
             <div class="form-group">
                 <label for="InUsername">Username :</label>
                 <input id="InUsername" placeholder="Type your username here" ng-model = "username" class="form-control input-small">
@@ -10,7 +10,7 @@
                 <label for="InPass">Password :</label>
                 <input id="InPass" placeholder="Type your password here" type="password" ng-model = "password" class="form-control input-small">
             </div>
-            <button class="btn btn-default" ng-click = "CheckLogin(username, password)">Login</button>
+            <button class="btn btn-default" type="submit">Login</button>
             </div>
         </fieldset>
     </form>

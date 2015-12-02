@@ -1,50 +1,24 @@
 <!DOCTYPE>
 <html ng-app = "myApp">
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-	<title>Contactlistapp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/Libs/CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+
+    <title>LabInventory</title>
 <head>
 <body>
-	<div class="container" ng-controller = "Appcontrol">
-		<h1>Resistor list</h1>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Soort</th>
-					<th>Waarde</th>
-					<th>Aantal</th>					
-					<th>&nbsp;</th>
-				</tr>	
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<select ng-model="resistor.sort">
-							<option value="Resistor">Resistor</option>
-							<option value="condensator">Condensator</option>
-						</select>
-					</td>
-					<td><INPUT class = "form-control" ng-model="resistor.value"></td>
-					<td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="resistor.number"></td>
-					<td><button class = "btn btn-primary" ng-click = "addResistor()">Add resistor</button></td>
-					<td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
+<h1>LabInventory</h1>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</body>
 
-				</tr>
-				<tr ng-repeat = "resistor in resistorlist">
-					<td>{{resistor.sort}}</td>
-					<td>{{resistor.value}}</td>
-					<td>{{resistor.number}}</td>
-					<td><button class = "btn btn-danger" ng-click = "remove(resistor._id)">Remove</button></td>
-					<td><button class = "btn btn-warning" ng-click = "edit(resistor._id)">Edit</button></td>
-
-				</tr>
-			</tbody>	
-		</table>
-	</div>
-	<script src = "
-https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js
- "></script>
- <script src="controllers/controller.js"></script>
+<script src="controllers/mainController.js"></script>
+<script src="controllers/loginController.js"></script>
+<script src="controllers/myIdentity.js"></script>
+<script src="controllers/mvAuth.js"></script>
 </body>
 </html>

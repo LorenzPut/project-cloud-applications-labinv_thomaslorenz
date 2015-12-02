@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp",["ngRoute", "ngToast"]);
+var myApp = angular.module("myApp",["ngRoute"]);
 
 myApp.config(['$routeProvider',
 	function($routeProvider) {
