@@ -130,6 +130,11 @@ app.post('/login',function(req,res,next)
 	})
 	auth(req,res, next);
 });
+
+app.post('/logout', function (req,res) {
+	req.logout();
+	res.end();
+});
 app.get('/resistorlist', function(req,res)
 {
 	console.log("I received a get request");

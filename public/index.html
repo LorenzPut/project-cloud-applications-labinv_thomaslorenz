@@ -4,21 +4,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/Libs/CSS/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
 
     <title>LabInventory</title>
 <head>
 <body>
-<h1>LabInventory</h1>
-    <div class="container">
-        <div ng-view></div>
-    </div>
+<div class="header" ng-controller = "LoginCtrl">
+    <h1>LabInventory</h1>
+    <ul ng-show="identity.isAuthenticated()" class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="" data-toggle="dropdown" class="dropdown-toggle">
+                {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li ng-show="identity.currentUser.isAdmin()">	<a href="/admin/users">User Admin</a>
+                </li>
+                <li>
+                    <a href="" ng-click="signout()">Sign Out</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="container">
+     <div ng-view></div>
+</div>
 </body>
 
 <script src="controllers/mainController.js"></script>
 <script src="controllers/loginController.js"></script>
-<script src="controllers/myIdentity.js"></script>
+<script src="controllers/mvIdentity.js"></script>
 <script src="controllers/mvAuth.js"></script>
 </body>
 </html>

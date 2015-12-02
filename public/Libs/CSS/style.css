@@ -4,7 +4,6 @@ body{
 h1{
     border : 2px solid black;
     text-align : center;
-    border-radius: 20px;
     background-color: lightblue;
 }
 h2{
