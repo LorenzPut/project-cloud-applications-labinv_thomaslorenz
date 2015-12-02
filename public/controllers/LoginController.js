@@ -10,6 +10,7 @@ myApp.controller('LoginCtrl', function CheckLoginData ($scope, $http, mvIdentity
         {
             if(success) {
                 alert("You are logged in");
+                $location.path('/componentList');
             }
             else {
                 alert("Login failed. Combination username/password is invalid");
