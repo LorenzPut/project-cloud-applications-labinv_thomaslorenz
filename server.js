@@ -24,8 +24,8 @@ app.use(passport.initialize());
 mongoose.connect('mongodb://admin:admin@ds054308.mongolab.com:54308/labinventory');
 
 //All database code
-var resistorScheme = mongoose.Schema({sort: String, value: String, number: Number});
-var resistorsmodel = mongoose.model('resistor', resistorScheme);
+var componentScheme = mongoose.Schema({sort: String, value: String, number: Number});
+var componentsmodel = mongoose.model('component', componentScheme);
 
 var userSchema = mongoose.Schema({
 	firstName : String,
@@ -135,25 +135,25 @@ app.post('/logout', function (req,res) {
 	req.logout();
 	res.end();
 });
-app.get('/resistorlist', function(req,res)
+app.get('/componentlist', function(req,res)
 {
 	console.log("I received a get request");
-	resistorsmodel.find().exec(function(err, docs)
+	componentsmodel.find().exec(function(err, docs)
 	{
 			res.json(docs);
 	});
-	
+
 });
-app.post('/resistorlist', function(req,res)
+app.post('/componentlist', function(req,res)
 {
 	console.log(req.body);
-	var resistor;
-	resistor = new resistorsmodel({
+	var component;
+	component = new componentsmodel({
 		sort: req.body.sort,
 		value: req.body.value,
 		number: req.body.number,
 	});
-	resistor.save(function(err)
+	component.save(function(err)
 	{
 		if(!err){
 			 console.log("created");
@@ -161,50 +161,50 @@ app.post('/resistorlist', function(req,res)
 		else{
 			 console.log(err);
 		}
-		return res.json(resistor);
+		return res.json(component);
 	});
 
 });
-app.delete("/resistorlist/:id", function(req,res)
+app.delete("/componentlist/:id", function(req,res)
 {
-	return resistorsmodel.findById(req.params.id, function(err, resistor)
+	return componentsmodel.findById(req.params.id, function(err, component)
 	{
-		return resistor.remove(function(err)
+		return component.remove(function(err)
 		{
 			if(!err){
-			 console.log("removed");
-			 res.json(resistor);
+			 console.log("component removed");
+			 res.json(component);
 		}
 		else{
 			 console.log(err);
 		}
-		});	
+		});
 	});
 
 });
-app.get('/resistorlist/:id', function(req,res)
+app.get('/componentlist/:id', function(req,res)
 {
-	return resistorsmodel.findById(req.params.id, function (err, resistor) {
+	return componentsmodel.findById(req.params.id, function (err, component) {
     if (!err) {
-       res.json(resistor);
+       res.json(component);
     } else {
        console.log(err);
     }
   });
 });
-app.put("/resistorlist/:id", function(req,res)
+app.put("/componentlist/:id", function(req,res)
 {
-	return resistorsmodel.findById(req.params.id, function (err, resistor) {
-    resistor.sort = req.body.sort,
-    resistor.value = req.body.value;
-    resistor.number = req.body.number;
-    return resistor.save(function (err) {
+	return componentsmodel.findById(req.params.id, function (err, component) {
+		component.sort = req.body.sort,
+		component.value = req.body.value;
+		component.number = req.body.number;
+    return component.save(function (err) {
       if (!err) {
         console.log("updated");
       } else {
         console.log(err);
       }
-      return res.json(resistor);
+      return res.json(component);
     });
   });
 
