@@ -85,7 +85,8 @@ passport.use(new LocalStrategy(
 			}
 		})
 	}
-))
+));
+
 
 passport.serializeUser(function(user,done)
 {
@@ -93,7 +94,7 @@ passport.serializeUser(function(user,done)
 	{
 		done(null, user._id);
 	}
-})
+});
 passport.deserializeUser(function(id,done)
 {
 	user.findOne({_id:id}).exec(function(err,user)
@@ -106,7 +107,10 @@ passport.deserializeUser(function(id,done)
 			done(null,false);
 		}
 	})
-})
+});
+
+
+
 app.post('/login',function(req,res,next)
 {
 	var auth = passport.authenticate('local', function(err,user)
@@ -134,6 +138,20 @@ app.post('/login',function(req,res,next)
 app.post('/logout', function (req,res) {
 	req.logout();
 	res.end();
+});
+
+app.post('/register', function (req,res) {
+	salt = createSalt();
+	hash = hashPwd(salt, req.body.password);
+	user.create({
+		firstName: req.body.firstname,
+		lastName: req.body.lastname,
+		userName: req.body.username,
+		salt: salt,
+		hashed_pwd: hash
+	});
+	res.end();
+
 });
 app.get('/componentlist', function(req,res)
 {

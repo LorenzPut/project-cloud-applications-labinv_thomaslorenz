@@ -1,22 +1,22 @@
 <div ng-controller = "RegisterCtrl" id="maindiv">
-    <form name = "RegisterForm" role="form" ng-submit="register(firstname, lastname, username, password)">
+    <form name = "RegisterForm" role="form" ng-submit="register()">
         <fieldset>
             <div class="row col-lg-10" >
             <div class="form-group">
                 <label for="InLastName">Firstname :</label>
-                <input id="InFirstName" placeholder="Type your firstname here" ng-model = "firstname" class="form-control input-small">
+                <input id="InFirstName" required placeholder="Type your firstname here" ng-model = "user.firstname" class="form-control input-small">
             </div>
             <div class="form-group">
                 <label for="inlastname">Lastname :</label>
-                <input id="InLastName" placeholder="Type your lastname here" ng-model = "lastname" class="form-control input-small">
+                <input id="InLastName" required placeholder="Type your lastname here" ng-model = "user.lastname" class="form-control input-small">
             </div>
             <div class="form-group">
                 <label for="InUsername">Username :</label>
-                <input id="InUsername" placeholder="Type your username here" ng-model = "username" class="form-control input-small">
+                <input id="InUsername" required placeholder="Type your username here" ng-model = "user.username" class="form-control input-small">
             </div>
             <div class = "form-group">
                 <label for="InPass">Password :</label>
-                <input id="InPass" placeholder="Type your password here" type="password" ng-model = "password" class="form-control input-small">
+                <input id="InPass" required placeholder="Type your password here" type="password" ng-model = "user.password" class="form-control input-small">
             </div>
             <button class="btn btn-default" type="submit">Register</button>
             </div>

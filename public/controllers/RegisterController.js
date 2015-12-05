@@ -3,7 +3,16 @@
  */
 myApp.controller('RegisterCtrl', function CheckLoginData ($scope, $http, mvIdentity, mvAuth, $location)
 {
-    $scope.register = function (firstname, lastname, username, password) {
-        alert("You are registered");
+    $scope.register = function () {
+        if($scope.RegisterForm.$valid)
+        {
+            $http.post('/register', $scope.user).success(function(response)
+            {
+                console.log(response);
+                alert("U bent correct geregistreerd");
+                $location.path('/');
+            });
+
+        }
     }
 });

@@ -6,16 +6,20 @@ myApp.controller('LoginCtrl', function CheckLoginData ($scope, $http, mvIdentity
     $scope.identity = mvIdentity;
     $scope.signin = function (username, password)
     {
-        mvAuth.authenticateUser(username, password).then(function(success)
+        if($scope.LoginForm.$valid)
         {
-            if(success) {
-                alert("You are logged in");
-                $location.path('/componentList');
-            }
-            else {
-                alert("Login failed. Combination username/password is invalid");
-            }
-        })
+            mvAuth.authenticateUser(username, password).then(function(success)
+            {
+                if(success) {
+                    alert("You are logged in");
+                    $location.path('/componentList');
+                }
+                else {
+                      alert("Login failed. Combination username/password is invalid" + success);
+                }
+            })
+        }
+
     }
     $scope.signout = function()
     {
