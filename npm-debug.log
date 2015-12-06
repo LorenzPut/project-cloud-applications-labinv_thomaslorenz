@@ -1,0 +1,745 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'barc',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose install initial load of C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\package.json
+5 warn package.json contactlistapp@1.0.0 No repository field.
+6 warn package.json contactlistapp@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\body-parser\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\cookie-parser\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\express\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\express-session\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\mongoose\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\passport\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\passport-local\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\toastr\package.json
+15 info package.json passport@0.3.2 No README data
+16 info package.json passport-local@1.0.0 No license field.
+17 info package.json toastr@2.1.2 No license field.
+18 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\package.json
+19 silly cache add args [ 'barc', null ]
+20 verbose cache add spec barc
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'barc',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'barc',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: '*',
+21 silly cache add   type: 'range' }
+22 silly addNamed barc@*
+23 verbose addNamed "*" is a valid semver range for barc
+24 silly addNameRange { name: 'barc', range: '*', hasData: false }
+25 silly mapToRegistry name barc
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/barc
+29 verbose addNameRange registry:https://registry.npmjs.org/barc not in flight; fetching
+30 verbose request uri https://registry.npmjs.org/barc
+31 verbose request no auth needed
+32 info attempt registry request try #1 at 20:49:50
+33 verbose request id e9c9adeb465a146c
+34 verbose etag "625XXFTPX9M0NGQH00ATQLDHB"
+35 http request GET https://registry.npmjs.org/barc
+36 http 304 https://registry.npmjs.org/barc
+37 verbose headers { date: 'Sun, 06 Dec 2015 19:49:49 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   'cache-control': 'max-age=60',
+37 verbose headers   etag: '"625XXFTPX9M0NGQH00ATQLDHB"',
+37 verbose headers   age: '0',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ams4125-AMS',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1449431389.089833,VS0,VE721',
+37 verbose headers   vary: 'Accept' }
+38 silly get cb [ 304,
+38 silly get   { date: 'Sun, 06 Dec 2015 19:49:49 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     'cache-control': 'max-age=60',
+38 silly get     etag: '"625XXFTPX9M0NGQH00ATQLDHB"',
+38 silly get     age: '0',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-ams4125-AMS',
+38 silly get     'x-cache': 'MISS',
+38 silly get     'x-cache-hits': '0',
+38 silly get     'x-timer': 'S1449431389.089833,VS0,VE721',
+38 silly get     vary: 'Accept' } ]
+39 verbose etag https://registry.npmjs.org/barc from cache
+40 verbose get saving barc to C:\Users\loren\AppData\Roaming\npm-cache\registry.npmjs.org\barc\.cache.json
+41 silly addNameRange number 2 { name: 'barc', range: '*', hasData: true }
+42 silly addNameRange versions [ 'barc', [ '0.0.1', '0.0.2', '0.0.3', '0.0.4' ] ]
+43 silly addNamed barc@0.0.4
+44 verbose addNamed "0.0.4" is a plain semver version for barc
+45 silly cache afterAdd barc@0.0.4
+46 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\barc\0.0.4\package\package.json not in flight; writing
+47 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\barc\0.0.4\package\package.json written
+48 silly install resolved [ { author: { name: 'Peter Magnusson', email: 'kmpm@birchroad.net' },
+48 silly install resolved     name: 'barc',
+48 silly install resolved     description: 'Library for creating 1D barcodes with node.js. Backed by node-canvas.',
+48 silly install resolved     keywords: [ 'barcode', 'canvas', 'code 128', 'code 2of5' ],
+48 silly install resolved     version: '0.0.4',
+48 silly install resolved     repository: { type: 'git', url: 'git://github.com/birchroad/node-barc.git' },
+48 silly install resolved     bugs: { url: 'http://github.com/birchroad/node-barc/issues' },
+48 silly install resolved     main: 'index.js',
+48 silly install resolved     engines: { node: '>=v0.4.8' },
+48 silly install resolved     dependencies: { canvas: '>=0.0.1' },
+48 silly install resolved     devDependencies: {},
+48 silly install resolved     licenses: [ [Object] ],
+48 silly install resolved     readme: '# node-barc\n Barc is a barcode library for 1D barcodes rendered using node-canvas.\n The plan is to suport at least Code2of5, Code39 and Code128 of whitch\n Code2of5 and Code128 are usable.\n It might not be 100% to specification in all cases but it works for\n most applications\n\n## Authors\n\n - Peter Magnusson\n\n## Installation\n    $ npm install barc\n\n### Dependencies\n [node-canvas](http://github.com/LearnBoost/node-canvas) might have some dependencies to look out for. \n Node canvas is a [Cairo](http://cairographics.org/) backed Canvas \n implementation for [NodeJS](http://nodejs.org).\n\n\n## Usage\n\n This library let\'s you define the size of the resulting image and that might\n lead to unreadable barcodes if you don\'t make enough room for it.\n The same goes for border and padding. If the smallest bar don\'t fit the\n resolution used then you will defenitely have issues.\n This will also apply if you add rotation which makes it hard for the graphics\n library and any printers to draw well defined lines.\n Try and see what fit your requirements.\n\n\n### Example\n\n```javascript\nvar Barc = require(\'barc\')\n\t,barc = new Barc()\n\t,fs = require(\'fs\');\n\n//create a 300x200 px image with the barcode 1234\nvar buf = barc.code2of5(\'1234\', 300, 200);\nfs.writeFile(__dirname + \'/example.png\', buf, function(){\n\tconsole.log(\'wrote it\');\n});\n```\n\n More examples are placed in _./examples_. Most produce one or more png images.\n\n\n## Reference\n\n### Barc#(options)\nConstructor which enables you to set common options for all generated barcodes.\n\n Valid options\n\n - hri - Defaults to __true__. If human readable information i.e. numbers are to be written as well.\n - border - Default to 0. The number of pixels black top and bottom border. Could be a function with (width, height) signature. If the string "auto" is given as border it is calculated to 1/30 of the image height.\n - padding Defaults to 0. Padding on the left and right edges. Can be a function with the signature (width, height).\n - font - Defaults to \'FreeMono\'. That font must be available to the graphics library\n - fontsize - Defaults to border width or min 12px. Number in pixels of the font size for hri.\n - checksum - Defaults to false. If true, the checksum is appended, if the code varaiant supports it. __Note__: In case of 2of5, the input length increases by one. As a result, the input length switches from even to odd and vice versa.\n\n\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 Peter Magnusson &lt;kmpm@birchroad.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+48 silly install resolved     readmeFilename: 'README.md',
+48 silly install resolved     _id: 'barc@0.0.4',
+48 silly install resolved     dist:
+48 silly install resolved      { shasum: '53fc8df5900fa3857c1d2ac0897e4f95e2b265f7',
+48 silly install resolved        tarball: 'http://registry.npmjs.org/barc/-/barc-0.0.4.tgz' },
+48 silly install resolved     _npmVersion: '1.1.69',
+48 silly install resolved     _npmUser: { name: 'birchroad', email: 'info@birchroad.net' },
+48 silly install resolved     maintainers: [ [Object] ],
+48 silly install resolved     directories: {},
+48 silly install resolved     _shasum: '53fc8df5900fa3857c1d2ac0897e4f95e2b265f7',
+48 silly install resolved     _resolved: 'https://registry.npmjs.org/barc/-/barc-0.0.4.tgz',
+48 silly install resolved     _from: 'barc@*',
+48 silly install resolved     homepage: 'https://github.com/birchroad/node-barc#readme' } ]
+49 info install barc@0.0.4 into C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+50 info installOne barc@0.0.4
+51 verbose installOne of barc to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory not in flight; installing
+52 verbose lock using C:\Users\loren\AppData\Roaming\npm-cache\_locks\barc-4205043ecf706a15.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+53 silly install write writing barc 0.0.4 to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+54 verbose unbuild node_modules\barc
+55 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc is being purged from base C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+56 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+57 verbose tar unpack C:\Users\loren\AppData\Roaming\npm-cache\barc\0.0.4\package.tgz
+58 verbose tar unpacking to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+59 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc is being purged
+60 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+61 silly gunzTarPerm modes [ '777', '666' ]
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+64 silly gunzTarPerm extractEntry .npmignore
+65 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+66 silly gunzTarPerm extractEntry README.md
+67 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+68 silly gunzTarPerm extractEntry LICENSE
+69 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+70 silly gunzTarPerm extractEntry index.js
+71 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+72 silly gunzTarPerm extractEntry lib/graphics-canvas.js
+73 silly gunzTarPerm modified mode [ 'lib/graphics-canvas.js', 420, 438 ]
+74 silly gunzTarPerm extractEntry lib/barc.js
+75 silly gunzTarPerm modified mode [ 'lib/barc.js', 420, 438 ]
+76 silly gunzTarPerm extractEntry lib/geometry.js
+77 silly gunzTarPerm modified mode [ 'lib/geometry.js', 420, 438 ]
+78 silly gunzTarPerm extractEntry lib/code2of5.js
+79 silly gunzTarPerm modified mode [ 'lib/code2of5.js', 420, 438 ]
+80 silly gunzTarPerm extractEntry lib/code128.js
+81 silly gunzTarPerm modified mode [ 'lib/code128.js', 420, 438 ]
+82 verbose write writing to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\package.json
+83 info preinstall barc@0.0.4
+84 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\package.json
+85 silly prepareForInstallMany adding canvas@>=0.0.1 from barc dependencies
+86 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\package.json
+87 silly cache add args [ 'canvas@>=0.0.1', null ]
+88 verbose cache add spec canvas@>=0.0.1
+89 silly cache add parsed spec Result {
+89 silly cache add   raw: 'canvas@>=0.0.1',
+89 silly cache add   scope: null,
+89 silly cache add   name: 'canvas',
+89 silly cache add   rawSpec: '>=0.0.1',
+89 silly cache add   spec: '>=0.0.1',
+89 silly cache add   type: 'range' }
+90 silly addNamed canvas@>=0.0.1
+91 verbose addNamed ">=0.0.1" is a valid semver range for canvas
+92 silly addNameRange { name: 'canvas', range: '>=0.0.1', hasData: false }
+93 silly mapToRegistry name canvas
+94 silly mapToRegistry using default registry
+95 silly mapToRegistry registry https://registry.npmjs.org/
+96 silly mapToRegistry uri https://registry.npmjs.org/canvas
+97 verbose addNameRange registry:https://registry.npmjs.org/canvas not in flight; fetching
+98 verbose request uri https://registry.npmjs.org/canvas
+99 verbose request no auth needed
+100 info attempt registry request try #1 at 20:49:52
+101 verbose etag "190JHUDHS87WMCJVX93OL2JP1"
+102 http request GET https://registry.npmjs.org/canvas
+103 http 304 https://registry.npmjs.org/canvas
+104 verbose headers { date: 'Sun, 06 Dec 2015 19:49:50 GMT',
+104 verbose headers   via: '1.1 varnish',
+104 verbose headers   'cache-control': 'max-age=60',
+104 verbose headers   etag: '"190JHUDHS87WMCJVX93OL2JP1"',
+104 verbose headers   age: '0',
+104 verbose headers   connection: 'keep-alive',
+104 verbose headers   'x-served-by': 'cache-ams4120-AMS',
+104 verbose headers   'x-cache': 'HIT',
+104 verbose headers   'x-cache-hits': '1',
+104 verbose headers   'x-timer': 'S1449431390.057203,VS0,VE668',
+104 verbose headers   vary: 'Accept' }
+105 silly get cb [ 304,
+105 silly get   { date: 'Sun, 06 Dec 2015 19:49:50 GMT',
+105 silly get     via: '1.1 varnish',
+105 silly get     'cache-control': 'max-age=60',
+105 silly get     etag: '"190JHUDHS87WMCJVX93OL2JP1"',
+105 silly get     age: '0',
+105 silly get     connection: 'keep-alive',
+105 silly get     'x-served-by': 'cache-ams4120-AMS',
+105 silly get     'x-cache': 'HIT',
+105 silly get     'x-cache-hits': '1',
+105 silly get     'x-timer': 'S1449431390.057203,VS0,VE668',
+105 silly get     vary: 'Accept' } ]
+106 verbose etag https://registry.npmjs.org/canvas from cache
+107 verbose get saving canvas to C:\Users\loren\AppData\Roaming\npm-cache\registry.npmjs.org\canvas\.cache.json
+108 silly addNameRange number 2 { name: 'canvas', range: '>=0.0.1', hasData: true }
+109 silly addNameRange versions [ 'canvas',
+109 silly addNameRange   [ '0.0.1',
+109 silly addNameRange     '0.0.2',
+109 silly addNameRange     '0.0.3',
+109 silly addNameRange     '0.0.4',
+109 silly addNameRange     '0.0.5',
+109 silly addNameRange     '0.0.6',
+109 silly addNameRange     '0.0.7',
+109 silly addNameRange     '0.0.8',
+109 silly addNameRange     '0.1.0',
+109 silly addNameRange     '0.2.0',
+109 silly addNameRange     '0.2.1',
+109 silly addNameRange     '0.3.0',
+109 silly addNameRange     '0.3.1',
+109 silly addNameRange     '0.3.2',
+109 silly addNameRange     '0.3.3',
+109 silly addNameRange     '0.4.0',
+109 silly addNameRange     '0.4.1',
+109 silly addNameRange     '0.4.2',
+109 silly addNameRange     '0.4.3',
+109 silly addNameRange     '0.5.0',
+109 silly addNameRange     '0.5.1',
+109 silly addNameRange     '0.5.2',
+109 silly addNameRange     '0.5.3',
+109 silly addNameRange     '0.5.4',
+109 silly addNameRange     '0.6.0',
+109 silly addNameRange     '0.7.0',
+109 silly addNameRange     '0.7.1',
+109 silly addNameRange     '0.7.2',
+109 silly addNameRange     '0.7.3',
+109 silly addNameRange     '0.8.0',
+109 silly addNameRange     '0.8.1',
+109 silly addNameRange     '0.8.2',
+109 silly addNameRange     '0.8.3',
+109 silly addNameRange     '0.9.0',
+109 silly addNameRange     '0.10.0',
+109 silly addNameRange     '0.10.1',
+109 silly addNameRange     '0.10.2',
+109 silly addNameRange     '0.10.3',
+109 silly addNameRange     '0.11.0',
+109 silly addNameRange     '0.11.1',
+109 silly addNameRange     '0.11.2',
+109 silly addNameRange     '0.11.3',
+109 silly addNameRange     '0.12.0',
+109 silly addNameRange     '0.12.1',
+109 silly addNameRange     '0.13.0',
+109 silly addNameRange     '0.13.1',
+109 silly addNameRange     '1.0.0',
+109 silly addNameRange     '1.0.1',
+109 silly addNameRange     '1.0.2',
+109 silly addNameRange     '1.0.3',
+109 silly addNameRange     '1.0.4',
+109 silly addNameRange     '1.1.0',
+109 silly addNameRange     '1.1.1',
+109 silly addNameRange     '1.1.2',
+109 silly addNameRange     '1.1.3',
+109 silly addNameRange     '1.1.4',
+109 silly addNameRange     '1.1.5',
+109 silly addNameRange     '1.1.6',
+109 silly addNameRange     '1.2.0',
+109 silly addNameRange     '1.2.1',
+109 silly addNameRange     '1.2.2',
+109 silly addNameRange     '1.2.3',
+109 silly addNameRange     '1.2.4',
+109 silly addNameRange     '1.2.5',
+109 silly addNameRange     '1.2.6',
+109 silly addNameRange     '1.2.7',
+109 silly addNameRange     '1.2.8',
+109 silly addNameRange     '1.2.9',
+109 silly addNameRange     '1.2.10',
+109 silly addNameRange     '1.2.11',
+109 silly addNameRange     '1.3.0',
+109 silly addNameRange     '1.3.1',
+109 silly addNameRange     '1.3.2',
+109 silly addNameRange     '1.3.3',
+109 silly addNameRange     '1.3.4' ] ]
+110 silly addNamed canvas@1.3.4
+111 verbose addNamed "1.3.4" is a plain semver version for canvas
+112 silly cache afterAdd canvas@1.3.4
+113 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\canvas\1.3.4\package\package.json not in flight; writing
+114 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\canvas\1.3.4\package\package.json written
+115 silly install resolved [ { name: 'canvas',
+115 silly install resolved     description: 'Canvas graphics API backed by Cairo',
+115 silly install resolved     version: '1.3.4',
+115 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+115 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+115 silly install resolved     keywords:
+115 silly install resolved      [ 'canvas',
+115 silly install resolved        'graphic',
+115 silly install resolved        'graphics',
+115 silly install resolved        'pixman',
+115 silly install resolved        'cairo',
+115 silly install resolved        'image',
+115 silly install resolved        'images',
+115 silly install resolved        'pdf' ],
+115 silly install resolved     homepage: 'https://github.com/Automattic/node-canvas',
+115 silly install resolved     repository:
+115 silly install resolved      { type: 'git',
+115 silly install resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+115 silly install resolved     scripts:
+115 silly install resolved      { prebenchmark: 'node-gyp build',
+115 silly install resolved        benchmark: 'node benchmarks/run.js',
+115 silly install resolved        pretest: 'node-gyp build',
+115 silly install resolved        test: 'mocha test/*.test.js',
+115 silly install resolved        'pretest-server': 'node-gyp build',
+115 silly install resolved        'test-server': 'node test/server.js',
+115 silly install resolved        install: 'node-gyp rebuild' },
+115 silly install resolved     dependencies: { nan: '^2.1.0' },
+115 silly install resolved     devDependencies:
+115 silly install resolved      { 'body-parser': '^1.13.3',
+115 silly install resolved        express: '^4.13.2',
+115 silly install resolved        jade: '^1.11.0',
+115 silly install resolved        mocha: '*' },
+115 silly install resolved     engines: { node: '>=0.8.0' },
+115 silly install resolved     main: './lib/canvas.js',
+115 silly install resolved     license: 'MIT',
+115 silly install resolved     gypfile: true,
+115 silly install resolved     gitHead: '873141d89b89e0891ba7650f728fd0b37d36c924',
+115 silly install resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+115 silly install resolved     _id: 'canvas@1.3.4',
+115 silly install resolved     _shasum: '5640d2eda1ae33b7c7279346dc253ceb6647c71d',
+115 silly install resolved     _from: 'canvas@>=0.0.1',
+115 silly install resolved     _npmVersion: '3.3.9',
+115 silly install resolved     _nodeVersion: '5.0.0',
+115 silly install resolved     _npmUser: { name: 'linusu', email: 'linus@folkdatorn.se' },
+115 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+115 silly install resolved     dist:
+115 silly install resolved      { shasum: '5640d2eda1ae33b7c7279346dc253ceb6647c71d',
+115 silly install resolved        tarball: 'http://registry.npmjs.org/canvas/-/canvas-1.3.4.tgz' },
+115 silly install resolved     directories: {},
+115 silly install resolved     _resolved: 'https://registry.npmjs.org/canvas/-/canvas-1.3.4.tgz',
+115 silly install resolved     readme: 'ERROR: No README data found!' } ]
+116 info install canvas@1.3.4 into C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+117 info installOne canvas@1.3.4
+118 verbose installOne of canvas to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc not in flight; installing
+119 verbose lock using C:\Users\loren\AppData\Roaming\npm-cache\_locks\canvas-849e052c41a29f79.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+120 silly install write writing canvas 1.3.4 to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+121 verbose unbuild node_modules\barc\node_modules\canvas
+122 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas is being purged from base C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+123 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+124 verbose tar unpack C:\Users\loren\AppData\Roaming\npm-cache\canvas\1.3.4\package.tgz
+125 verbose tar unpacking to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+126 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas is being purged
+127 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+128 silly gunzTarPerm modes [ '777', '666' ]
+129 silly gunzTarPerm extractEntry package.json
+130 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+131 silly gunzTarPerm extractEntry .npmignore
+132 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+133 silly gunzTarPerm extractEntry index.js
+134 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+135 silly gunzTarPerm extractEntry Readme.md
+136 silly gunzTarPerm modified mode [ 'Readme.md', 420, 438 ]
+137 silly gunzTarPerm extractEntry binding.gyp
+138 silly gunzTarPerm modified mode [ 'binding.gyp', 493, 511 ]
+139 silly gunzTarPerm extractEntry .travis.yml
+140 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+141 silly gunzTarPerm extractEntry install
+142 silly gunzTarPerm modified mode [ 'install', 493, 511 ]
+143 silly gunzTarPerm extractEntry lib/bindings.js
+144 silly gunzTarPerm modified mode [ 'lib/bindings.js', 420, 438 ]
+145 silly gunzTarPerm extractEntry lib/canvas.js
+146 silly gunzTarPerm modified mode [ 'lib/canvas.js', 420, 438 ]
+147 silly gunzTarPerm extractEntry lib/context2d.js
+148 silly gunzTarPerm modified mode [ 'lib/context2d.js', 420, 438 ]
+149 silly gunzTarPerm extractEntry lib/image.js
+150 silly gunzTarPerm modified mode [ 'lib/image.js', 420, 438 ]
+151 silly gunzTarPerm extractEntry lib/jpegstream.js
+152 silly gunzTarPerm modified mode [ 'lib/jpegstream.js', 420, 438 ]
+153 silly gunzTarPerm extractEntry lib/pngstream.js
+154 silly gunzTarPerm modified mode [ 'lib/pngstream.js', 420, 438 ]
+155 silly gunzTarPerm extractEntry History.md
+156 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+157 silly gunzTarPerm extractEntry src/Image.cc
+158 silly gunzTarPerm modified mode [ 'src/Image.cc', 420, 438 ]
+159 silly gunzTarPerm extractEntry src/Canvas.cc
+160 silly gunzTarPerm modified mode [ 'src/Canvas.cc', 420, 438 ]
+161 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+162 silly gunzTarPerm modified mode [ 'src/CanvasGradient.cc', 420, 438 ]
+163 silly gunzTarPerm extractEntry src/CanvasGradient.h
+164 silly gunzTarPerm modified mode [ 'src/CanvasGradient.h', 420, 438 ]
+165 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+166 silly gunzTarPerm modified mode [ 'src/CanvasPattern.cc', 420, 438 ]
+167 silly gunzTarPerm extractEntry src/CanvasPattern.h
+168 silly gunzTarPerm modified mode [ 'src/CanvasPattern.h', 420, 438 ]
+169 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+170 silly gunzTarPerm modified mode [ 'src/CanvasRenderingContext2d.cc', 493, 511 ]
+171 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+172 silly gunzTarPerm modified mode [ 'src/CanvasRenderingContext2d.h', 420, 438 ]
+173 silly gunzTarPerm extractEntry src/FontFace.cc
+174 silly gunzTarPerm modified mode [ 'src/FontFace.cc', 493, 511 ]
+175 silly gunzTarPerm extractEntry src/FontFace.h
+176 silly gunzTarPerm modified mode [ 'src/FontFace.h', 420, 438 ]
+177 silly gunzTarPerm extractEntry src/Canvas.h
+178 silly gunzTarPerm modified mode [ 'src/Canvas.h', 420, 438 ]
+179 silly gunzTarPerm extractEntry src/Image.h
+180 silly gunzTarPerm modified mode [ 'src/Image.h', 420, 438 ]
+181 silly gunzTarPerm extractEntry src/ImageData.cc
+182 silly gunzTarPerm modified mode [ 'src/ImageData.cc', 420, 438 ]
+183 silly gunzTarPerm extractEntry src/ImageData.h
+184 silly gunzTarPerm modified mode [ 'src/ImageData.h', 420, 438 ]
+185 silly gunzTarPerm extractEntry src/JPEGStream.h
+186 silly gunzTarPerm modified mode [ 'src/JPEGStream.h', 420, 438 ]
+187 silly gunzTarPerm extractEntry src/PNG.h
+188 silly gunzTarPerm modified mode [ 'src/PNG.h', 420, 438 ]
+189 silly gunzTarPerm extractEntry src/Point.h
+190 silly gunzTarPerm modified mode [ 'src/Point.h', 420, 438 ]
+191 silly gunzTarPerm extractEntry src/closure.h
+192 silly gunzTarPerm modified mode [ 'src/closure.h', 420, 438 ]
+193 silly gunzTarPerm extractEntry src/color.cc
+194 silly gunzTarPerm modified mode [ 'src/color.cc', 420, 438 ]
+195 silly gunzTarPerm extractEntry src/color.h
+196 silly gunzTarPerm modified mode [ 'src/color.h', 420, 438 ]
+197 silly gunzTarPerm extractEntry src/init.cc
+198 silly gunzTarPerm modified mode [ 'src/init.cc', 493, 511 ]
+199 silly gunzTarPerm extractEntry util/cairo_include.sh
+200 silly gunzTarPerm modified mode [ 'util/cairo_include.sh', 493, 511 ]
+201 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+202 silly gunzTarPerm modified mode [ 'util/has_cairo_freetype.sh', 493, 511 ]
+203 silly gunzTarPerm extractEntry util/has_lib.sh
+204 silly gunzTarPerm modified mode [ 'util/has_lib.sh', 493, 511 ]
+205 silly gunzTarPerm extractEntry util/lib_lookup.sh
+206 silly gunzTarPerm modified mode [ 'util/lib_lookup.sh', 493, 511 ]
+207 verbose write writing to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\package.json
+208 info preinstall canvas@1.3.4
+209 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\package.json
+210 silly prepareForInstallMany adding nan@^2.1.0 from canvas dependencies
+211 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\package.json
+212 silly cache add args [ 'nan@^2.1.0', null ]
+213 verbose cache add spec nan@^2.1.0
+214 silly cache add parsed spec Result {
+214 silly cache add   raw: 'nan@^2.1.0',
+214 silly cache add   scope: null,
+214 silly cache add   name: 'nan',
+214 silly cache add   rawSpec: '^2.1.0',
+214 silly cache add   spec: '>=2.1.0 <3.0.0',
+214 silly cache add   type: 'range' }
+215 silly addNamed nan@>=2.1.0 <3.0.0
+216 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for nan
+217 silly addNameRange { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: false }
+218 silly mapToRegistry name nan
+219 silly mapToRegistry using default registry
+220 silly mapToRegistry registry https://registry.npmjs.org/
+221 silly mapToRegistry uri https://registry.npmjs.org/nan
+222 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+223 verbose request uri https://registry.npmjs.org/nan
+224 verbose request no auth needed
+225 info attempt registry request try #1 at 20:49:53
+226 verbose etag "7CEDVJA24M9BXRU7SU6WRSW4M"
+227 http request GET https://registry.npmjs.org/nan
+228 http 304 https://registry.npmjs.org/nan
+229 verbose headers { date: 'Sun, 06 Dec 2015 19:49:51 GMT',
+229 verbose headers   via: '1.1 varnish',
+229 verbose headers   'cache-control': 'max-age=60',
+229 verbose headers   etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+229 verbose headers   age: '50',
+229 verbose headers   connection: 'keep-alive',
+229 verbose headers   'x-served-by': 'cache-ams4123-AMS',
+229 verbose headers   'x-cache': 'HIT',
+229 verbose headers   'x-cache-hits': '1',
+229 verbose headers   'x-timer': 'S1449431391.065525,VS0,VE0',
+229 verbose headers   vary: 'Accept' }
+230 silly get cb [ 304,
+230 silly get   { date: 'Sun, 06 Dec 2015 19:49:51 GMT',
+230 silly get     via: '1.1 varnish',
+230 silly get     'cache-control': 'max-age=60',
+230 silly get     etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+230 silly get     age: '50',
+230 silly get     connection: 'keep-alive',
+230 silly get     'x-served-by': 'cache-ams4123-AMS',
+230 silly get     'x-cache': 'HIT',
+230 silly get     'x-cache-hits': '1',
+230 silly get     'x-timer': 'S1449431391.065525,VS0,VE0',
+230 silly get     vary: 'Accept' } ]
+231 verbose etag https://registry.npmjs.org/nan from cache
+232 verbose get saving nan to C:\Users\loren\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+233 silly addNameRange number 2 { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: true }
+234 silly addNameRange versions [ 'nan',
+234 silly addNameRange   [ '0.3.0-wip',
+234 silly addNameRange     '0.3.0-wip2',
+234 silly addNameRange     '0.3.0',
+234 silly addNameRange     '0.3.1',
+234 silly addNameRange     '0.3.2',
+234 silly addNameRange     '0.4.0',
+234 silly addNameRange     '0.4.1',
+234 silly addNameRange     '0.4.2',
+234 silly addNameRange     '0.4.3',
+234 silly addNameRange     '0.4.4',
+234 silly addNameRange     '0.5.0',
+234 silly addNameRange     '0.5.1',
+234 silly addNameRange     '0.5.2',
+234 silly addNameRange     '0.6.0',
+234 silly addNameRange     '0.7.0',
+234 silly addNameRange     '0.7.1',
+234 silly addNameRange     '0.8.0',
+234 silly addNameRange     '1.0.0',
+234 silly addNameRange     '1.1.0',
+234 silly addNameRange     '1.1.1',
+234 silly addNameRange     '1.1.2',
+234 silly addNameRange     '1.2.0',
+234 silly addNameRange     '1.3.0',
+234 silly addNameRange     '1.4.0',
+234 silly addNameRange     '1.4.1',
+234 silly addNameRange     '1.5.0',
+234 silly addNameRange     '1.4.2',
+234 silly addNameRange     '1.4.3',
+234 silly addNameRange     '1.5.1',
+234 silly addNameRange     '1.5.2',
+234 silly addNameRange     '1.6.0',
+234 silly addNameRange     '1.5.3',
+234 silly addNameRange     '1.6.1',
+234 silly addNameRange     '1.6.2',
+234 silly addNameRange     '1.7.0',
+234 silly addNameRange     '1.8.0',
+234 silly addNameRange     '1.8.1',
+234 silly addNameRange     '1.8.2',
+234 silly addNameRange     '1.8.3',
+234 silly addNameRange     '1.8.4',
+234 silly addNameRange     '1.9.0',
+234 silly addNameRange     '2.0.0',
+234 silly addNameRange     '2.0.1',
+234 silly addNameRange     '2.0.2',
+234 silly addNameRange     '2.0.3',
+234 silly addNameRange     '2.0.4',
+234 silly addNameRange     '2.0.5',
+234 silly addNameRange     '2.0.6',
+234 silly addNameRange     '2.0.7',
+234 silly addNameRange     '2.0.8',
+234 silly addNameRange     '2.0.9',
+234 silly addNameRange     '2.1.0' ] ]
+235 silly addNamed nan@2.1.0
+236 verbose addNamed "2.1.0" is a plain semver version for nan
+237 silly cache afterAdd nan@2.1.0
+238 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\nan\2.1.0\package\package.json not in flight; writing
+239 verbose afterAdd C:\Users\loren\AppData\Roaming\npm-cache\nan\2.1.0\package\package.json written
+240 silly install resolved [ { name: 'nan',
+240 silly install resolved     version: '2.1.0',
+240 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+240 silly install resolved     main: 'include_dirs.js',
+240 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+240 silly install resolved     scripts:
+240 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+240 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+240 silly install resolved        docs: 'doc/.build.sh' },
+240 silly install resolved     contributors:
+240 silly install resolved      [ [Object],
+240 silly install resolved        [Object],
+240 silly install resolved        [Object],
+240 silly install resolved        [Object],
+240 silly install resolved        [Object],
+240 silly install resolved        [Object],
+240 silly install resolved        [Object] ],
+240 silly install resolved     devDependencies:
+240 silly install resolved      { bindings: '~1.2.1',
+240 silly install resolved        commander: '^2.8.1',
+240 silly install resolved        glob: '^5.0.14',
+240 silly install resolved        'node-gyp': '~3.0.1',
+240 silly install resolved        tap: '~0.7.1',
+240 silly install resolved        xtend: '~4.0.0' },
+240 silly install resolved     license: 'MIT',
+240 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+240 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+240 silly install resolved     _id: 'nan@2.1.0',
+240 silly install resolved     _shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+240 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.1.0.tgz',
+240 silly install resolved     _from: 'nan@>=2.1.0 <3.0.0',
+240 silly install resolved     _npmVersion: '3.3.5',
+240 silly install resolved     _nodeVersion: '4.1.2',
+240 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+240 silly install resolved     dist:
+240 silly install resolved      { shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+240 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.1.0.tgz' },
+240 silly install resolved     maintainers: [ [Object], [Object] ],
+240 silly install resolved     directories: {},
+240 silly install resolved     readme: 'ERROR: No README data found!' } ]
+241 info install nan@2.1.0 into C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+242 info installOne nan@2.1.0
+243 verbose installOne of nan to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas not in flight; installing
+244 verbose lock using C:\Users\loren\AppData\Roaming\npm-cache\_locks\nan-49e94c9434fab88f.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+245 silly install write writing nan 2.1.0 to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+246 verbose unbuild node_modules\barc\node_modules\canvas\node_modules\nan
+247 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan is being purged from base C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+248 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+249 verbose tar unpack C:\Users\loren\AppData\Roaming\npm-cache\nan\2.1.0\package.tgz
+250 verbose tar unpacking to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+251 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan is being purged
+252 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+253 silly gunzTarPerm modes [ '777', '666' ]
+254 silly gunzTarPerm extractEntry package.json
+255 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+256 silly gunzTarPerm extractEntry README.md
+257 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+258 silly gunzTarPerm extractEntry include_dirs.js
+259 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+260 silly gunzTarPerm extractEntry nan_converters.h
+261 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+262 silly gunzTarPerm extractEntry LICENSE.md
+263 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+264 silly gunzTarPerm extractEntry .dntrc
+265 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+266 silly gunzTarPerm extractEntry appveyor.yml
+267 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+268 silly gunzTarPerm extractEntry doc/new.md
+269 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+270 silly gunzTarPerm extractEntry doc/.build.sh
+271 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 511 ]
+272 silly gunzTarPerm extractEntry doc/buffers.md
+273 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+274 silly gunzTarPerm extractEntry doc/callback.md
+275 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+276 silly gunzTarPerm extractEntry doc/converters.md
+277 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+278 silly gunzTarPerm extractEntry doc/errors.md
+279 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+280 silly gunzTarPerm extractEntry doc/maybe_types.md
+281 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+282 silly gunzTarPerm extractEntry doc/methods.md
+283 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+284 silly gunzTarPerm extractEntry doc/asyncworker.md
+285 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+286 silly gunzTarPerm extractEntry doc/node_misc.md
+287 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+288 silly gunzTarPerm extractEntry doc/persistent.md
+289 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+290 silly gunzTarPerm extractEntry doc/scopes.md
+291 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+292 silly gunzTarPerm extractEntry doc/script.md
+293 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+294 silly gunzTarPerm extractEntry doc/string_bytes.md
+295 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+296 silly gunzTarPerm extractEntry doc/v8_internals.md
+297 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+298 silly gunzTarPerm extractEntry doc/v8_misc.md
+299 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+300 silly gunzTarPerm extractEntry nan.h
+301 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+302 silly gunzTarPerm extractEntry nan_callbacks.h
+303 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+304 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+305 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+306 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+307 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+308 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+309 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+310 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+311 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+312 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+313 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+314 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+315 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+316 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+317 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+318 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+319 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+320 silly gunzTarPerm extractEntry nan_new.h
+321 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+322 silly gunzTarPerm extractEntry nan_object_wrap.h
+323 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+324 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+325 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+326 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+327 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+328 silly gunzTarPerm extractEntry nan_string_bytes.h
+329 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+330 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+331 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+332 silly gunzTarPerm extractEntry nan_weak.h
+333 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+334 silly gunzTarPerm extractEntry CHANGELOG.md
+335 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+336 silly gunzTarPerm extractEntry tools/package.json
+337 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+338 silly gunzTarPerm extractEntry tools/README.md
+339 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+340 silly gunzTarPerm extractEntry tools/1to2.js
+341 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+342 verbose write writing to C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan\package.json
+343 info preinstall nan@2.1.0
+344 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan\package.json
+345 verbose readDependencies loading dependencies from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan\package.json
+346 silly install resolved []
+347 verbose about to build C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+348 info build C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+349 info linkStuff nan@2.1.0
+350 silly linkStuff nan@2.1.0 has C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules as its parent node_modules
+351 verbose linkBins nan@2.1.0
+352 verbose linkMans nan@2.1.0
+353 verbose rebuildBundles nan@2.1.0
+354 info install nan@2.1.0
+355 info postinstall nan@2.1.0
+356 verbose unlock done using C:\Users\loren\AppData\Roaming\npm-cache\_locks\nan-49e94c9434fab88f.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas\node_modules\nan
+357 verbose about to build C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+358 info build C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+359 info linkStuff canvas@1.3.4
+360 silly linkStuff canvas@1.3.4 has C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules as its parent node_modules
+361 verbose linkBins canvas@1.3.4
+362 verbose linkMans canvas@1.3.4
+363 verbose rebuildBundles canvas@1.3.4
+364 verbose rebuildBundles [ 'nan' ]
+365 info install canvas@1.3.4
+366 verbose unsafe-perm in lifecycle true
+367 info canvas@1.3.4 Failed to exec install script
+368 verbose unlock done using C:\Users\loren\AppData\Roaming\npm-cache\_locks\canvas-849e052c41a29f79.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+369 verbose about to build C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+370 verbose unlock done using C:\Users\loren\AppData\Roaming\npm-cache\_locks\barc-4205043ecf706a15.lock for C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+371 verbose stack Error: canvas@1.3.4 install: `node-gyp rebuild`
+371 verbose stack Exit status 1
+371 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
+371 verbose stack     at emitTwo (events.js:87:13)
+371 verbose stack     at EventEmitter.emit (events.js:172:7)
+371 verbose stack     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+371 verbose stack     at emitTwo (events.js:87:13)
+371 verbose stack     at ChildProcess.emit (events.js:172:7)
+371 verbose stack     at maybeClose (internal/child_process.js:818:16)
+371 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+372 verbose pkgid canvas@1.3.4
+373 verbose cwd C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+374 error Windows_NT 10.0.10240
+375 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "barc" "--save"
+376 error node v4.2.3
+377 error npm  v2.14.7
+378 error code ELIFECYCLE
+379 error canvas@1.3.4 install: `node-gyp rebuild`
+379 error Exit status 1
+380 error Failed at the canvas@1.3.4 install script 'node-gyp rebuild'.
+380 error This is most likely a problem with the canvas package,
+380 error not with npm itself.
+380 error Tell the author that this fails on your system:
+380 error     node-gyp rebuild
+380 error You can get their info via:
+380 error     npm owner ls canvas
+380 error There is likely additional logging output above.
+381 verbose exit [ 1, true ]
+382 verbose unbuild node_modules\barc\node_modules\canvas
+383 info preuninstall canvas@1.3.4
+384 info uninstall canvas@1.3.4
+385 verbose unbuild rmStuff canvas@1.3.4 from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules
+386 verbose unbuild rmStuff in C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules
+387 info postuninstall canvas@1.3.4
+388 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas is being purged from base C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+389 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+390 silly vacuum-fs purging C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules\canvas
+391 silly vacuum-fs removing C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc\node_modules
+392 silly vacuum-fs quitting because other entries in C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+393 verbose unbuild node_modules\barc
+394 info preuninstall barc@0.0.4
+395 info uninstall barc@0.0.4
+396 verbose unbuild rmStuff barc@0.0.4 from C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules
+397 info postuninstall barc@0.0.4
+398 silly gentlyRm C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc is being purged from base C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory
+399 verbose gentlyRm don't care about contents; nuking C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+400 silly vacuum-fs purging C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules\barc
+401 silly vacuum-fs quitting because other entries in C:\Users\loren\Desktop\Elektronica - ICT\Cloud applications\LabInventory\node_modules

@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp",["ngRoute"]);
+var myApp = angular.module("myApp",["ngRoute", "barcodeGenerator"]);
 
 myApp.config(['$routeProvider',
 	function($routeProvider) {
@@ -31,6 +31,7 @@ myApp.controller('Appcontrol',function ($scope, $http){
 
 		$scope.addComponent = function ()
 		{
+
 			console.log($scope.component);
 			$http.post('/componentlist', $scope.component).success(function(response)
 				{					
