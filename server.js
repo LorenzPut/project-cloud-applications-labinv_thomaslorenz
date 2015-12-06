@@ -24,7 +24,7 @@ app.use(passport.initialize());
 mongoose.connect('mongodb://admin:admin@ds054308.mongolab.com:54308/labinventory');
 
 //All database code
-var componentScheme = mongoose.Schema({sort: String, value: String, number: Number});
+var componentScheme = mongoose.Schema({sort: String, value: String, number: Number, imageurl: String});
 var componentsmodel = mongoose.model('component', componentScheme);
 
 var userSchema = mongoose.Schema({
@@ -170,6 +170,7 @@ app.post('/componentlist', function(req,res)
 		sort: req.body.sort,
 		value: req.body.value,
 		number: req.body.number,
+		imageurl: req.body.imageurl
 	});
 	component.save(function(err)
 	{
