@@ -24,7 +24,7 @@ app.use(passport.initialize());
 mongoose.connect('mongodb://admin:admin@ds054308.mongolab.com:54308/labinventory');
 
 //All database code
-var componentScheme = mongoose.Schema({sort: String, value: String, number: Number, imageurl: String});
+var componentScheme = mongoose.Schema({Type: String, Value: String, Quantity: Number, Imageurl: String, Barcode: String, Note: String});
 var componentsmodel = mongoose.model('component', componentScheme);
 
 var userSchema = mongoose.Schema({
@@ -167,10 +167,13 @@ app.post('/componentlist', function(req,res)
 	console.log(req.body);
 	var component;
 	component = new componentsmodel({
-		sort: req.body.sort,
-		value: req.body.value,
-		number: req.body.number,
-		imageurl: req.body.imageurl
+		Type: req.body.Type,
+		Value: req.body.Value,
+		Quantity: req.body.Quantity,
+		Imageurl: req.body.Imageurl,
+		Number: req.Barcode,
+		Note: req.Note,
+
 	});
 	component.save(function(err)
 	{
@@ -214,9 +217,13 @@ app.get('/componentlist/:id', function(req,res)
 app.put("/componentlist/:id", function(req,res)
 {
 	return componentsmodel.findById(req.params.id, function (err, component) {
-		component.sort = req.body.sort,
-		component.value = req.body.value;
-		component.number = req.body.number;
+		component.Type = req.body.Type,
+		component.Value = req.body.Value;
+		component.Quantity = req.body.Quantity,
+		component.Imageurl = req.body.Imageurl,
+		component.Barcode = req.body.Barcode,
+		component.Note = req.body.Note
+
     return component.save(function (err) {
       if (!err) {
         console.log("updated");

@@ -6,34 +6,36 @@
             <th>Soort</th>
             <th>Waarde</th>
             <th>Aantal</th>
-            <th>Image URL</th>
             <th>Barcode</th>
+            <th>Image URL</th>
             <th>&nbsp;</th>
         </tr>
         </thead>
         <body>
         <tr>
             <td>
-                <select ng-model="component.sort">
+                <select ng-model="component.Type">
                     <option value="Resistor">Resistor</option>
                     <option value="Condensator">Condensator</option>
+                    <option value="Potentiometer">Potentiometer</option>
+                    <option value="Arduino">Arduino</option>
+                    <option value="Varia">Varia</option>
                 </select>
             </td>
-            <td><INPUT class = "form-control" ng-model="component.value"></td>
-            <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.number"></td>
-            <td><INPUT type="text" class = "form-control" ng-model="component.imageurl"></td>
+            <td><INPUT class = "form-control" ng-model="component.Value"></td>
+            <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.Quantity"></td>
             <td></td>
-            <td><button class = "btn btn-primary" ng-click = "addComponent()">Add {{component.sort}}</button></td>
+            <td><INPUT type="text" class = "form-control" ng-model="component.Imageurl"></td>
+            <td><button class = "btn btn-primary" ng-click = "addComponent()">Add {{component.Type}}</button></td>
             <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
 
         </tr>
         <tr ng-repeat = "component in componentList">
-            <td>{{component.sort}}</td>
-            <td>{{component.value}}</td>
-            <td>{{component.number}}</td>
-            <td><a href="{{component.imageurl}}">{{component.imageurl}}</a></td>
-            <td><canvas barcode-generator="{{component.value}}" style="height:208px;"></canvas></td>
-            <td><div barcode-generator="{{component.value}}" style="height:208px;"></div></td>
+            <td>{{component.Type}}</td>
+            <td>{{component.Value}}</td>
+            <td>{{component.Quantity}}</td>
+            <td><div barcode-generator="{{component.Value}}" style="height:100px;"></div><p>{{component.Value}}</p></td>
+            <td></td>
             <td><button class = "btn btn-danger" ng-click = "remove(component._id)">Remove</button></td>
             <td><button class = "btn btn-warning" ng-click = "edit(component._id)">Edit</button></td>
 
