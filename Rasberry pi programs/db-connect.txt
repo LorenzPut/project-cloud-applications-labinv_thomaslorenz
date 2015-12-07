@@ -1,0 +1,23 @@
+import sys
+import pymongo
+
+from pymongo import MongoClient
+import json
+#Setup Connection to mongolabs
+connection = MongoClient("ds054298.mongolab.com" ,54298)
+db = connection ["rasppi"]
+
+#Setup authentication for mongolabs
+db.authenticate("admin","Azerty123")
+
+print "Succesfully connected to mongodb"
+
+auther = raw_input("Pleas enter some auther :")
+text = raw_input("pleas enter some text")
+
+post = {"auther":auther,
+        "text":text,
+        "tags":["mongodb","python","pymongo"],
+        "data":"Piemelkaas"}
+posts = db.posts
+posts.insert(post)

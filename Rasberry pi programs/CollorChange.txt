@@ -1,0 +1,20 @@
+#import the tinker module
+import Tkinter
+#create a new window
+window = Tkinter.Tk()
+#set window name
+window.title("Collor Changer")
+#set window size
+window.geometry("300x300")
+def changeBlue():
+        window.configure(background="#336666")
+def changeRed():
+        window.configure(background="#f30806")
+
+
+btnBlue = Tkinter.Button(window, text = "Blue", command=changeBlue)
+btnBlue.pack()
+btnRed = Tkinter.Button(window, text="Red", command=changeRed)
+btnRed.pack()
+#draw the window, and start the app
+window.mainloop()

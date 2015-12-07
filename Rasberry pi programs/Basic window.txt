@@ -1,0 +1,28 @@
+#import the tinker module
+import Tkinter
+#create a new window
+window = Tkinter.Tk()
+#set window name
+window.title("Super-cool window")
+#set window size
+window.geometry("300x300")
+
+#create a lable
+lbl = Tkinter.Label(window, text="geef hier iets in")
+
+#create a text entry (textbox)
+ent =Tkinter.Entry(window)
+
+#create a button
+btn= Tkinter.Button(window, text="Button", fg="#a1dbcd", bg="#383a39")
+
+#pack (add) widget inti the window
+lbl.pack()
+ent.pack()
+btn.pack()
+
+#set background
+window.configure(background="#336666")
+
+#draw the window, and start the app
+window.mainloop()

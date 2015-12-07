@@ -1,0 +1,37 @@
+
+#import the tinker module
+import Tkinter
+import tkFont
+import ttk
+#create a new window
+window = Tkinter.Tk()
+#set window name
+window.title("lab Inventory System")
+#set window size
+window.geometry("800x600")
+#Set fond to helvetica
+helv36 = tkFont.Font(family='Helvetica',size=36,weight='bold')
+
+
+lbl1=Tkinter.Label(window,text="name",font=helv36)
+lbl2=Tkinter.Label(window,text="paswoord",font=helv36)
+entr1=Tkinter.Entry(window,font=helv36)
+entr2=Tkinter.Entry(window,font=helv36)
+
+lbl1.grid(row=0, sticky='e' ,padx=20, pady=20)
+lbl2.grid(row=1, sticky='e', padx=20, pady=20)
+entr1.grid(row=0, column=1 , padx=20, pady=20)
+entr2.grid(row=1, column=1, padx=20, pady=20 )
+
+#set background
+#window.configure(background="#336666")
+
+#draw the window, and start the app
+window.mainloop()
+
+
+
+
+
+
+
