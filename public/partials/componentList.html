@@ -7,7 +7,6 @@
             <th>Waarde</th>
             <th>Aantal</th>
             <th>Barcode</th>
-            <th>Image URL</th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -24,8 +23,8 @@
             </td>
             <td><INPUT class = "form-control" ng-model="component.Value"></td>
             <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.Quantity"></td>
+
             <td></td>
-            <td><INPUT type="text" class = "form-control" ng-model="component.Imageurl"></td>
             <td><button class = "btn btn-primary" ng-click = "addComponent()">Add {{component.Type}}</button></td>
             <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
 
@@ -34,10 +33,9 @@
             <td>{{component.Type}}</td>
             <td>{{component.Value}}</td>
             <td>{{component.Quantity}}</td>
-            <td><div barcode-generator="{{component.Value}}" style="height:100px;"></div><p>{{component.Value}}</p></td>
-            <td></td>
+            <td><div id="{{$index}}"><div  barcode-generator="{{component.Value}}" style="height:100px; text-align: center";></div><p>{{component.Value}}</p></div></td>
             <td><button class = "btn btn-danger" ng-click = "remove(component._id)">Remove</button></td>
-            <td><button class = "btn btn-warning" ng-click = "edit(component._id)">Edit</button></td>
+            <td><button class = "btn btn-warning" ng-click = "edit(component._id)">Edit</button>&nbsp;&nbsp;<button ng-click="downloadbarcode($index)" class="btn btn-info">Download barcode</button></td>
 
         </tr>
         </body>

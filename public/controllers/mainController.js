@@ -68,6 +68,15 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		{
 			$scope.component = "";
 		};
+		$scope.downloadbarcode = function(id)
+		{
+			html2canvas($("#"+id), {
+				onrendered: function(canvas) {
+					Canvas2Image.saveAsPNG(canvas);
+
+				}
+			});
+		}
 	refresh();
 
 
