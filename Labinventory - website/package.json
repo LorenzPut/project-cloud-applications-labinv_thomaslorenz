@@ -16,6 +16,7 @@
     "express-session": "^1.12.1",
     "mongojs": "^1.4.1",
     "mongoose": "^4.2.9",
+    "node-schedule": "^0.6.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "restify": "^4.0.3",
