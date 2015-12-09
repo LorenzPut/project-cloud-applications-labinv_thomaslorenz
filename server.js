@@ -153,6 +153,8 @@ app.post('/register', function (req,res) {
 	res.end();
 
 });
+
+
 app.get('/componentlist', function(req,res)
 {
 	console.log("I received a get request");
@@ -164,17 +166,58 @@ app.get('/componentlist', function(req,res)
 });
 app.post('/componentlist', function(req,res)
 {
+	var imageurl;
+	if(req.body.Type === 'Resistor')
+	{
+		imageurl = "http://media.digikey.com/Renders/Yageo%20Renders/CFR-12JR-100R.jpg";
+	}
+	else if(req.body.Type === 'Condensator')
+	{
+		imageurl = "https://www.conrad.nl/medias/global/ce/4000_4999/4400/4460/4460/446016_BB_00_FB.EPS_1000.jpg";
+	}
+	else if(req.body.Type === 'Potentiometer')
+	{
+		imageurl = "https://upload.wikimedia.org/wikipedia/commons/b/b5/Potentiometer.jpg";
+	}
+	else if(req.body.Type === 'Arduino')
+	{
+		imageurl = "http://www.cvodeverdieping.be/sites/deverdiepings-fresh.dd/files/48912-arduinouno_r3_front.jpg";
+	}
+	else if(req.body.Type === 'Varia')
+	{
+		imageurl = "http://jessfm.be/jfm/wp-content/uploads/2015/02/rommelmarkt.jpg";
+	}
 	console.log(req.body);
-	var component;
+	var component, type;
+	if(type == "Resistor")
+	{
+		type = "Res ";
+	}
+	else if(type == "Condensator")
+	{
+		type = "Con";
+	}
+	else if(type == "Potentiometer")
+	{
+		type = "Pot ";
+	}
+	else if(type == "Arduino")
+	{
+		type = "Ard ";
+	}
+	else if(type == "Varia")
+	{
+		type = "Var ";
+	}
 	component = new componentsmodel({
 		Type: req.body.Type,
 		Value: req.body.Value,
 		Quantity: req.body.Quantity,
 		Imageurl: req.body.Imageurl,
-		Number: req.Barcode,
-		Note: req.Note,
+		Barcode: type + req.body.Value,
+		Note: req.Note
 
-	});
+});
 	component.save(function(err)
 	{
 		if(!err){

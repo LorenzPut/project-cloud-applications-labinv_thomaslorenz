@@ -18,16 +18,19 @@ myApp.config(['$routeProvider',
 	}]);
 
 myApp.controller('Appcontrol',function ($scope, $http){
-		console.log("Hello world from controller");
+
+
 		var refresh = function() {
 			$http.get('/componentlist').success(function(response)
 			{
 				console.log("I got the data I requested");
 				$scope.componentList = response;
 				$scope.component = "";
+				console.log($scope.component.Type);
 
 			});
 		};
+
 
 		$scope.addComponent = function ()
 		{
@@ -55,6 +58,30 @@ myApp.controller('Appcontrol',function ($scope, $http){
 				$scope.component = response;
 			});
 		};
+		$scope.converttype = function(type)
+		{
+			if(type == "Resistor")
+			{
+				return "Res ";
+			}
+			else if(type == "Condensator")
+			{
+				return "Con ";
+			}
+			else if(type == "Potentiometer")
+			{
+				return "Pot ";
+			}
+			else if(type == "Arduino")
+			{
+				return "Ard ";
+			}
+			else if(type == "Varia")
+			{
+				return "Var ";
+			}
+
+		};
 		$scope.update = function()
 		{
 			console.log($scope.component._id)
@@ -68,18 +95,17 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		{
 			$scope.component = "";
 		};
-		$scope.downloadbarcode = function(id)
-		{
-			html2canvas($("#"+id), {
-				onrendered: function(canvas) {
+
+		$scope.downloadbarcode = function(id) {
+			html2canvas($("#" + id), {
+				onrendered: function (canvas) {
 					Canvas2Image.saveAsPNG(canvas);
-
 				}
-			});
-		}
+		});
+
+
+	}
 	refresh();
-
-
 
 });
 

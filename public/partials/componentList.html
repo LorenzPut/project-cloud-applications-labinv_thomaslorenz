@@ -29,11 +29,11 @@
             <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
 
         </tr>
-        <tr ng-repeat = "component in componentList">
+        <tr ng-repeat = "component in componentList" >
             <td>{{component.Type}}</td>
             <td>{{component.Value}}</td>
             <td>{{component.Quantity}}</td>
-            <td><div id="{{$index}}"><div  barcode-generator="{{component.Value}}" style="height:100px; text-align: center";></div><p>{{component.Value}}</p></div></td>
+            <td><div id="{{$index}}" ><div barcode-generator="{{converttype(component.Type) + component.Value}}" style="height:100px; text-align: center";></div><p>{{converttype(component.Type) + component.Value}}</p></div></td>
             <td><button class = "btn btn-danger" ng-click = "remove(component._id)">Remove</button></td>
             <td><button class = "btn btn-warning" ng-click = "edit(component._id)">Edit</button>&nbsp;&nbsp;<button ng-click="downloadbarcode($index)" class="btn btn-info">Download barcode</button></td>
 
