@@ -28,6 +28,7 @@ var componentScheme = mongoose.Schema({Type: String, Value: String, Quantity: Nu
 var componentsmodel = mongoose.model('component', componentScheme);
 
 var userSchema = mongoose.Schema({
+	studentId : String,
 	firstName : String,
 	lastName : String,
 	userName : String,
@@ -49,15 +50,15 @@ user.find({}).exec(function(err,collection)
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Lorenz');
-		user.create({firstName: "Lorenz", lastName: "Put", userName : "Lorenz", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s079368",firstName: "Lorenz", lastName: "Put", userName : "Lorenz", salt : salt, hashed_pwd: hash});
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Thomas');
-		user.create({firstName: "Thomas", lastName: "Van Havere", userName : "Thomas", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s060171",firstName: "Thomas", lastName: "Van Havere", userName : "Thomas", salt : salt, hashed_pwd: hash});
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Stefan');
-		user.create({firstName: "Stefan", lastName: "Blommaert", userName : "Stefan", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s081945", firstName: "Stefan", lastName: "Blommaert", userName : "Stefan", salt : salt, hashed_pwd: hash});
 	}
 })
 
@@ -143,7 +144,8 @@ app.post('/logout', function (req,res) {
 app.post('/register', function (req,res) {
 	salt = createSalt();
 	hash = hashPwd(salt, req.body.password);
-	user.create({
+	user.create({ 
+		studentId : req.body.studentId,
 		firstName: req.body.firstname,
 		lastName: req.body.lastname,
 		userName: req.body.username,
