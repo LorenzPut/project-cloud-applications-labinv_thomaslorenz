@@ -144,7 +144,7 @@ app.post('/logout', function (req,res) {
 app.post('/register', function (req,res) {
 	salt = createSalt();
 	hash = hashPwd(salt, req.body.password);
-	user.create({ 
+	user.create({
 		studentId : req.body.studentId,
 		firstName: req.body.firstname,
 		lastName: req.body.lastname,
@@ -191,23 +191,23 @@ app.post('/componentlist', function(req,res)
 	}
 	console.log(req.body);
 	var component, type;
-	if(type == "Resistor")
+	if(req.body.Type == "Resistor")
 	{
 		type = "Res ";
 	}
-	else if(type == "Condensator")
+	else if(req.body.Type == "Condensator")
 	{
 		type = "Con";
 	}
-	else if(type == "Potentiometer")
+	else if(req.body.Type == "Potentiometer")
 	{
 		type = "Pot ";
 	}
-	else if(type == "Arduino")
+	else if(req.body.Type == "Arduino")
 	{
 		type = "Ard ";
 	}
-	else if(type == "Varia")
+	else if(req.body.Type == "Varia")
 	{
 		type = "Var ";
 	}
@@ -215,7 +215,7 @@ app.post('/componentlist', function(req,res)
 		Type: req.body.Type,
 		Value: req.body.Value,
 		Quantity: req.body.Quantity,
-		Imageurl: req.body.Imageurl,
+		Imageurl: imageurl,
 		Barcode: type + req.body.Value,
 		Note: req.Note
 
