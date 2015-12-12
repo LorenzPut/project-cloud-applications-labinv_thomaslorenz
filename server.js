@@ -193,7 +193,7 @@ app.post('/componentlist', function(req,res)
 	var component, type;
 	if(req.body.Type == "Resistor")
 	{
-		type = "Res ";
+		type = "Res";
 	}
 	else if(req.body.Type == "Condensator")
 	{
@@ -201,15 +201,15 @@ app.post('/componentlist', function(req,res)
 	}
 	else if(req.body.Type == "Potentiometer")
 	{
-		type = "Pot ";
+		type = "Pot";
 	}
 	else if(req.body.Type == "Arduino")
 	{
-		type = "Ard ";
+		type = "Ard";
 	}
 	else if(req.body.Type == "Varia")
 	{
-		type = "Var ";
+		type = "Var";
 	}
 	component = new componentsmodel({
 		Type: req.body.Type,
@@ -282,5 +282,5 @@ app.put("/componentlist/:id", function(req,res)
 });
 
 //Listen to port 7000
-app.listen(process.env.PORT || 7000);
-console.log('server running on port 7000');
+app.listen(process.env.PORT || 8000);
+console.log('server running on port 8000');

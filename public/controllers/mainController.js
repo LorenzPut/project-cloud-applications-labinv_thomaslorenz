@@ -35,14 +35,18 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		$scope.addComponent = function ()
 		{
 
-			console.log($scope.component);
-			$http.post('/componentlist', $scope.component).success(function(response)
-				{					
+				console.log($scope.component);
+				$http.post('/componentlist', $scope.component).success(function (response) {
 					refresh();
 					console.log("refresh fired.");
 					console.log(response);
 				});
+
 		};
+
+
+
+
 		$scope.remove = function(id)
 		{
 			console.log(id);
@@ -62,23 +66,23 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		{
 			if(type == "Resistor")
 			{
-				return "Res ";
+				return "Res";
 			}
 			else if(type == "Condensator")
 			{
-				return "Con ";
+				return "Con";
 			}
 			else if(type == "Potentiometer")
 			{
-				return "Pot ";
+				return "Pot";
 			}
 			else if(type == "Arduino")
 			{
-				return "Ard ";
+				return "Ard";
 			}
 			else if(type == "Varia")
 			{
-				return "Var ";
+				return "Var";
 			}
 
 		};

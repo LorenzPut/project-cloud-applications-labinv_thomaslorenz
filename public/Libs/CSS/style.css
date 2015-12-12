@@ -13,10 +13,8 @@ h2{
 
 #maindiv{
     text-align: center;
-    height:auto;
-    width: auto;
     margin : 0 auto;
-    max-width: 60%;
+    max-width: 50%;
 }
 .button{
     width: 15%;
