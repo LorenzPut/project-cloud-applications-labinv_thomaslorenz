@@ -12,6 +12,7 @@
         </thead>
         <body>
         <tr>
+            <form name = "ComponentForm" role="form" >
             <td>
                 <select ng-model="component.Type">
                     <option value="Resistor">Resistor</option>
@@ -21,7 +22,6 @@
                     <option value="Varia">Varia</option>
                 </select>
             </td>
-            <form name = "ComponentForm" role="form" >
                 <td><INPUT class = "form-control" ng-model="component.Value"onkeyup="nospaces(this)" required></td>
                 <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.Quantity" required></td>
                 <td></td>
