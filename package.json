@@ -1,11 +1,11 @@
 {
-  "name": "contactlistapp",
+  "name": "Labinventory",
   "version": "1.0.0",
   "description": "Basic reading and writing to database",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node Labinventory - website/server.js"
   },
   "author": "Lorenz Put",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "express-session": "^1.12.1",
     "mongojs": "^1.4.1",
     "mongoose": "^4.2.9",
+    "node-schedule": "^0.6.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "restify": "^4.0.3",

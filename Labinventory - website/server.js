@@ -28,6 +28,7 @@ var componentScheme = mongoose.Schema({Type: String, Value: String, Quantity: Nu
 var componentsmodel = mongoose.model('component', componentScheme);
 
 var userSchema = mongoose.Schema({
+	studentId : String,
 	firstName : String,
 	lastName : String,
 	userName : String,
@@ -49,15 +50,15 @@ user.find({}).exec(function(err,collection)
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Lorenz');
-		user.create({firstName: "Lorenz", lastName: "Put", userName : "Lorenz", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s079368",firstName: "Lorenz", lastName: "Put", userName : "Lorenz", salt : salt, hashed_pwd: hash});
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Thomas');
-		user.create({firstName: "Thomas", lastName: "Van Havere", userName : "Thomas", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s060171",firstName: "Thomas", lastName: "Van Havere", userName : "Thomas", salt : salt, hashed_pwd: hash});
 
 		salt = createSalt();
 		hash = hashPwd(salt, 'Stefan');
-		user.create({firstName: "Stefan", lastName: "Blommaert", userName : "Stefan", salt : salt, hashed_pwd: hash});
+		user.create({studentId: "s081945", firstName: "Stefan", lastName: "Blommaert", userName : "Stefan", salt : salt, hashed_pwd: hash});
 	}
 })
 
@@ -144,6 +145,7 @@ app.post('/register', function (req,res) {
 	salt = createSalt();
 	hash = hashPwd(salt, req.body.password);
 	user.create({
+		studentId : req.body.studentId,
 		firstName: req.body.firstname,
 		lastName: req.body.lastname,
 		userName: req.body.username,
@@ -153,6 +155,8 @@ app.post('/register', function (req,res) {
 	res.end();
 
 });
+
+
 app.get('/componentlist', function(req,res)
 {
 	console.log("I received a get request");
@@ -164,17 +168,58 @@ app.get('/componentlist', function(req,res)
 });
 app.post('/componentlist', function(req,res)
 {
+	var imageurl;
+	if(req.body.Type === 'Resistor')
+	{
+		imageurl = "http://media.digikey.com/Renders/Yageo%20Renders/CFR-12JR-100R.jpg";
+	}
+	else if(req.body.Type === 'Condensator')
+	{
+		imageurl = "https://www.conrad.nl/medias/global/ce/4000_4999/4400/4460/4460/446016_BB_00_FB.EPS_1000.jpg";
+	}
+	else if(req.body.Type === 'Potentiometer')
+	{
+		imageurl = "https://upload.wikimedia.org/wikipedia/commons/b/b5/Potentiometer.jpg";
+	}
+	else if(req.body.Type === 'Arduino')
+	{
+		imageurl = "http://www.cvodeverdieping.be/sites/deverdiepings-fresh.dd/files/48912-arduinouno_r3_front.jpg";
+	}
+	else if(req.body.Type === 'Varia')
+	{
+		imageurl = "http://jessfm.be/jfm/wp-content/uploads/2015/02/rommelmarkt.jpg";
+	}
 	console.log(req.body);
-	var component;
+	var component, type;
+	if(req.body.Type == "Resistor")
+	{
+		type = "Res";
+	}
+	else if(req.body.Type == "Condensator")
+	{
+		type = "Con";
+	}
+	else if(req.body.Type == "Potentiometer")
+	{
+		type = "Pot";
+	}
+	else if(req.body.Type == "Arduino")
+	{
+		type = "Ard";
+	}
+	else if(req.body.Type == "Varia")
+	{
+		type = "Var";
+	}
 	component = new componentsmodel({
 		Type: req.body.Type,
 		Value: req.body.Value,
 		Quantity: req.body.Quantity,
-		Imageurl: req.body.Imageurl,
-		Number: req.Barcode,
-		Note: req.Note,
+		Imageurl: imageurl,
+		Barcode: type + req.body.Value,
+		Note: req.Note
 
-	});
+});
 	component.save(function(err)
 	{
 		if(!err){
@@ -237,5 +282,5 @@ app.put("/componentlist/:id", function(req,res)
 });
 
 //Listen to port 7000
-app.listen(process.env.PORT || 7000);
-console.log('server running on port 7000');
+app.listen(process.env.PORT || 8000);
+console.log('server running on port 8000');
