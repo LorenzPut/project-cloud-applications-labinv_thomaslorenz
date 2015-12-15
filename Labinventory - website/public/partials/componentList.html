@@ -22,10 +22,10 @@
                     <option value="Varia">Varia</option>
                 </select>
             </td>
-                <td><INPUT class = "form-control" ng-model="component.Value"onkeyup="nospaces(this);" required></td>
+                <td><INPUT class = "form-control" ng-model="component.Value"onkeyup="return nospacecs(this); " required></td>
                 <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.Quantity" required></td>
                 <td class="hidden-xs hidden-sm"></td>
-                <td><button class = "btn btn-primary" ng-click="addComponent(component.Type, component.Value)">Add {{component.Type}}</button></td>
+                <td><button class = "btn btn-primary" ng-click="addComponent()">Add {{component.Type}}</button></td>
             </form>
             <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
 

@@ -101,7 +101,6 @@ myApp.controller('Appcontrol',function ($scope, $http){
 					Canvas2Image.saveAsPNG(canvas);
 				}
 		});
-
 	}
 	refresh();
 

@@ -168,17 +168,8 @@ app.get('/componentlist', function(req,res)
 });
 app.post('/componentlist', function(req,res)
 {
-		console.log(req.body);
 		var component, type;
-		var type0 = req.body.Type;
-        var value = req.body.Value;
-           mongoose.model('component').find({'Type': type0, 'Value': value}, function(err, user){
-               if(err){
-                console.log("error");
-               }else{
-                 console.log("eureka");
-               }
-           });
+
 
 
 		if(req.body.Type == "Resistor")
@@ -209,16 +200,27 @@ app.post('/componentlist', function(req,res)
 			Note: req.Note
 
 		});
-		component.save(function(err)
-		{
-			if(!err){
-				console.log("created");
-			}
-			else{
-				console.log(err);
-			}
-			return res.json(component);
-		});
+		console.log(req.body)
+          componentsmodel.findOne({Value: component.Value, Type: component.Type}, function(err, samecomp){
+               //console.log("entering query to componentsmodel");
+               if(samecomp == null){
+                component.save(function(error)
+                {
+                    if(!error){
+                        console.log("created");
+                    }
+                    else{
+                        console.log(error);
+                    }
+                    return res.json(component);
+                });
+
+               }else{
+                 console.log(samecomp.Type);
+                 console.log(samecomp.Value);
+               }
+          });
+
 });
 app.delete("/componentlist/:id", function(req,res)
 {
@@ -226,7 +228,7 @@ app.delete("/componentlist/:id", function(req,res)
 	{
 		return component.remove(function(err)
 		{
-			if(!err){
+			if(!err)  {
 			 console.log("component removed");
 			 res.json(component);
 		}
