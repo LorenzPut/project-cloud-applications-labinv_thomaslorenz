@@ -31,10 +31,8 @@ myApp.controller('Appcontrol',function ($scope, $http){
 			});
 		};
 
-
-		$scope.addComponent = function ()
+		$scope.addComponent = function (type,value)
 		{
-
 				console.log($scope.component);
 				$http.post('/componentlist', $scope.component).success(function (response) {
 					refresh();
@@ -43,9 +41,6 @@ myApp.controller('Appcontrol',function ($scope, $http){
 				});
 
 		};
-
-
-
 
 		$scope.remove = function(id)
 		{
@@ -106,7 +101,6 @@ myApp.controller('Appcontrol',function ($scope, $http){
 					Canvas2Image.saveAsPNG(canvas);
 				}
 		});
-
 
 	}
 	refresh();

@@ -6,7 +6,7 @@
             <th>Soort</th>
             <th>Waarde</th>
             <th>Aantal</th>
-            <th>Barcode</th>
+            <th class="hidden-xs">Barcode</th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -22,10 +22,10 @@
                     <option value="Varia">Varia</option>
                 </select>
             </td>
-                <td><INPUT class = "form-control" ng-model="component.Value"onkeyup="nospaces(this)" required></td>
+                <td><INPUT class = "form-control" ng-model="component.Value"onkeyup="nospaces(this);" required></td>
                 <td><INPUT type="number" min="1" max="500" class = "form-control" ng-model="component.Quantity" required></td>
-                <td></td>
-                <td><button class = "btn btn-primary" ng-click="addComponent()">Add {{component.Type}}</button></td>
+                <td class="hidden-xs hidden-sm"></td>
+                <td><button class = "btn btn-primary" ng-click="addComponent(component.Type, component.Value)">Add {{component.Type}}</button></td>
             </form>
             <td><button class = "btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
 
@@ -35,7 +35,7 @@
             <td>{{component.Type}}</td>
             <td>{{component.Value}}</td>
             <td>{{component.Quantity}}</td>
-            <td><div id="{{$index}}" ><div barcode-generator="{{converttype(component.Type) + component.Value}}" style="height:100px; text-align: center";></div><p>{{converttype(component.Type) + component.Value}}</p></div></td>
+            <td class="hidden-xs!important"><div id="{{$index}}" ><div id="barcode" barcode-generator="{{converttype(component.Type) + component.Value}}" style="height:100px; text-align: center; width: auto;" ></div><p>{{converttype(component.Type) + component.Value}}</p></div></td>
             <td><button class = "btn btn-danger" ng-click = "remove(component._id)">Remove</button></td>
             <td><button class = "btn btn-warning" ng-click = "edit(component._id)">Edit</button>&nbsp;&nbsp;<button ng-click="downloadbarcode($index)" class="btn btn-info">Download barcode</button></td>
 

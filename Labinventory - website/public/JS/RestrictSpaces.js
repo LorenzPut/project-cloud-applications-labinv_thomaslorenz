@@ -3,9 +3,8 @@
  */
 function nospaces(t){
 
-    if(t.value.match(/\s/g)){
 
-        alert('Value cannot have spaces');
+    if(t.value.match(/\s/g)){
 
         t.value=t.value.replace(/\s/g,'');
 

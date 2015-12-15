@@ -28,6 +28,9 @@
                 <li>
                     <a href="" ng-click="signout()">Sign Out</a>
                 </li>
+                <li>
+                    <a href="#register">Register new user</a>
+                </li>
             </ul>
         </li>
     </ul>
@@ -37,6 +40,7 @@
 <div class="container">
      <div ng-view></div>
 </div>
+<footer class="container" id = "footer">&copy; by Artesis Plantijn Hogeschool. Created by : Thomas van Havere, Stefan Blommaert & Lorenz Put</footer>
 </body>
 
 <script src="controllers/mainController.js"></script>
@@ -46,6 +50,6 @@
 <script src="controllers/RegisterController.js"></script>
 <script src="Libs/barcodeGenerator/barcodeGenerator.js"></script>
 <script src="Libs/Canvas2Image/Canvas2Image.js"></script>
-<script src="controllers/RestrictSpaces.js"></script>
-</body>
+<script src="JS/RestrictSpaces.js"></script>
+<script src="JS/ForceLower.js"></script>
 </html>
