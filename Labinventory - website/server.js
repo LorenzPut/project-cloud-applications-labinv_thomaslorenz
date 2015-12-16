@@ -170,8 +170,6 @@ app.post('/componentlist', function(req,res)
 {
 		var component, type;
 
-
-
 		if(req.body.Type == "Resistor")
 		{
 			type = "Res";

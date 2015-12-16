@@ -45,4 +45,8 @@ a.button {
     text-align:center;
     width: 100%;
 }
+img{
+    display: inline-block;
+    float: right;
+}
 
