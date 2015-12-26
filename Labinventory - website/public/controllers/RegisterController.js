@@ -1,6 +1,4 @@
-/**
- * Created by Lorenz Put on 24-11-2015.
- */
+
 myApp.controller('RegisterCtrl', function CheckLoginData ($scope, $http, mvIdentity, mvAuth, $location)
 {
     $scope.register = function () {
@@ -8,7 +6,6 @@ myApp.controller('RegisterCtrl', function CheckLoginData ($scope, $http, mvIdent
         {
             $http.post('/register', $scope.user).success(function(response)
             {
-                console.log(response);
                 alert("U bent correct geregistreerd");
                 $location.path('/');
             });

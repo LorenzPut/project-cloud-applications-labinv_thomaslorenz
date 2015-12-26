@@ -23,35 +23,28 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		var refresh = function() {
 			$http.get('/componentlist').success(function(response)
 			{
-				console.log("I got the data I requested");
 				$scope.componentList = response;
 				$scope.component = "";
-				console.log($scope.component.Type);
 
 			});
 		};
 
 		$scope.addComponent = function (type,value)
 		{
-				console.log($scope.component);
 				$http.post('/componentlist', $scope.component).success(function (response) {
 					refresh();
-					console.log("refresh fired.");
-					console.log(response);
 				});
 
 		};
 
 		$scope.remove = function(id)
 		{
-			console.log(id);
 			$http.delete("/componentlist/" + id).success(function(response){
 					refresh();
 			});
 		};
 		$scope.edit = function(id)
 		{
-			console.log(id);
 			$http.get('/componentlist/' + id).success(function(response)
 			{
 				$scope.component = response;
@@ -83,7 +76,6 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		};
 		$scope.update = function()
 		{
-			console.log($scope.component._id)
 			$http.put("/componentlist/" + $scope.component._id, $scope.component).success(function(response)
 			{
 				refresh();
@@ -103,6 +95,5 @@ myApp.controller('Appcontrol',function ($scope, $http){
 		});
 	}
 	refresh();
-
 });
 

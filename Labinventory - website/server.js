@@ -4,20 +4,14 @@ var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
-var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var crypto = require('crypto');
 
 //set up static routes
 app.use(express.static(__dirname + "/public"));
 
-app.use(cookieParser());
-
 //Use json body-parser
 app.use(bodyparser.json());
-
-//Use session
-app.use(session({secret:'Lab inventory unicorns'}));
 
 app.use(passport.initialize());
 //connection to database
@@ -162,7 +156,7 @@ app.get('/componentlist', function(req,res)
 	console.log("I received a get request");
 	componentsmodel.find().exec(function(err, docs)
 	{
-			res.json(docs);
+		res.json(docs);
 	});
 
 });

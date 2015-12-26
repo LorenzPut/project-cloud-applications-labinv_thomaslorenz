@@ -1,6 +1,4 @@
-/**
- * Created by Lorenz Put on 24-11-2015.
- */
+
 myApp.controller('LoginCtrl', function CheckLoginData ($scope, $http, mvIdentity, mvAuth, $location)
 {
     $scope.identity = mvIdentity;
