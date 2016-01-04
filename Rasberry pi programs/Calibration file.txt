@@ -1,6 +1,0 @@
-Section "InputClass"
-        Identifier "calibration"
-        MatchProduct "eGalax Inc. USB TouchController"
-        Option "Calibration"    "1958 74 176 1825"
-        Option "SwapAxes" "0"
-EndSection
