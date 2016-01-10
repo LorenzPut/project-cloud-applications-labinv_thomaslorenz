@@ -8,6 +8,7 @@ Wegens het feit dat dit project voor 2 verschillende vakken gemaakt is en dus ui
 In deze repo vindt u enkel de administratie website terug.
 
 Het overig deel van dit project kan u terug vinden op onderstaande link : 
+
 https://github.com/thomasvanhavere/Labinventory-IoT.git
 
 ## Inhoud
