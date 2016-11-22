@@ -15,7 +15,7 @@ app.use(bodyparser.json());
 
 app.use(passport.initialize());
 //connection to database
-mongoose.connect('mongodb://admin:admin@ds054308.mongolab.com:54308/labinventory');
+mongoose.connect('mongodb://admin:admin@ds021462.mlab.com:21462/labinventory');
 
 //All database code
 var componentScheme = mongoose.Schema({Type: String, Value: String, Quantity: Number, Barcode: String, Note: String});
